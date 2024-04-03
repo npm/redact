@@ -44,6 +44,12 @@ t.equal(
 )
 
 t.equal(
+  redactLog(`https://registry.npmjs.org/path/ac21ea09-80e1-4f87-a48f-c683c561b287/more/paths`),
+  'https://registry.npmjs.org/path/***/more/paths',
+  'should redact guid'
+)
+
+t.equal(
   redactLog('https://example.npmjs.org'),
   'https://example.npmjs.org',
   'should not replace single item with no password'
