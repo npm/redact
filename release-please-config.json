@@ -1,0 +1,42 @@
+{
+  "group-pull-request-title-pattern": "chore: release ${version}",
+  "pull-request-title-pattern": "chore: release${component} ${version}",
+  "changelog-sections": [
+    {
+      "type": "feat",
+      "section": "Features",
+      "hidden": false,
+      "collapse": false
+    },
+    {
+      "type": "fix",
+      "section": "Bug Fixes",
+      "hidden": false,
+      "collapse": false
+    },
+    {
+      "type": "docs",
+      "section": "Documentation",
+      "hidden": false,
+      "collapse": false
+    },
+    {
+      "type": "deps",
+      "section": "Dependencies",
+      "hidden": false,
+      "collapse": false
+    },
+    {
+      "type": "chore",
+      "section": "Chores",
+      "hidden": false,
+      "collapse": false
+    }
+  ],
+  "prerelease-type": "pre",
+  "packages": {
+    ".": {
+      "package-name": ""
+    }
+  }
+}
