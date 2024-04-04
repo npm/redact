@@ -1,5 +1,5 @@
 const t = require('tap')
-const { redactLog } = require('..')
+const { redact, redactLog } = require('..')
 
 t.equal(
   redactLog(),
@@ -63,7 +63,7 @@ t.equal(
 
 t.equal(
   redactLog('https://user:pass@registry.npmjs.org/ http://a:b@reg.github.com'),
-  'https://user:***@registry.npmjs.org/ http://a:***@reg.github.com/',
+  'https://user:***@registry.npmjs.org/ http://a:***@reg.github.com',
   'should replace multiple items on a string'
 )
 
@@ -71,6 +71,18 @@ t.equal(
   redactLog('Something https://user:pass@registry.npmjs.org/ foo bar'),
   'Something https://user:***@registry.npmjs.org/ foo bar',
   'should replace single item within a phrase'
+)
+
+t.equal(
+  redactLog('npm install basic ok'),
+  'npm install basic ok',
+  'redactLog will not replace basic tokens'
+)
+
+t.equal(
+  redact('npm install basic ok'),
+  'npm install basic ***',
+  'redact will replace basic tokens'
 )
 
 t.equal(
@@ -87,7 +99,7 @@ t.same(
   ]),
   [
     'Something https://user:***@registry.npmjs.org/ foo bar',
-    'http://foo:***@registry.npmjs.org/',
+    'http://foo:***@registry.npmjs.org',
     'http://example.npmjs.org',
   ],
   'should replace items in an array'
@@ -101,7 +113,7 @@ t.same(
   ]),
   [
     'Something --x=https://user:***@registry.npmjs.org/ foo bar',
-    '--url=http://foo:***@registry.npmjs.org/',
+    '--url=http://foo:***@registry.npmjs.org',
     '--url=http://example.npmjs.org',
   ],
   'should replace items in an array with equals'
