@@ -25,6 +25,36 @@ t.same(
   JSON.stringify({ url: 'http://username:********@example.com/' })
 )
 
+t.same(
+  server.redactSafe({
+    url: 'https://username:password@example.com',
+    headers: {
+      Authorization: 'Bearer examplebearer',
+      nested: {
+        basic: 'Basic exampletoken',
+      },
+    },
+    values: {
+      jwt: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c',
+      npm: 'npm_123456789012345678901234567890123456789012345678',
+    },
+  }),
+  JSON.stringify({
+    url: 'https://username:********@example.com/',
+    headers: {
+      Authorization: '[REDACTED_AUTH_HEADER]',
+      nested: {
+        basic: '[REDACTED_AUTH_HEADER]',
+      },
+    },
+    values: {
+      jwt: '[REDACTED_JSON_WEB_TOKEN]',
+      npm: '[REDACTED_NPM_SECRET]',
+    },
+  }),
+  'should perform server redact with all types of redactions'
+)
+
 t.equal(
   redactLog(),
   undefined,
