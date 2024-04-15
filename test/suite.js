@@ -42,7 +42,7 @@ const HANDLERS = {
     return value.replace(matcher.pattern, matcher.replacement)
   },
   cliRedact: ({ value }) => {
-    return cli.redactLog(value)
+    return cli.redact(value)
   },
   cliRedactLog: ({ value }) => {
     return cli.redactLog(value)

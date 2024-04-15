@@ -586,7 +586,7 @@ http://username:***@example.com
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore http_com_6 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.com
+=http://username:abc123@example.com
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore http_com_6 quotes cliRedact > must match snapshot 1`] = `
@@ -594,7 +594,7 @@ exports[`test/suite.js TAP cli redact httpUrlCore http_com_6 quotes cliRedact > 
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore http_com_6 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.com http://username:***@example.com
+http://username:abc123@example.com http://username:abc123@example.com
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore http_com_pass_path_6 just cliRedact > must match snapshot 1`] = `
@@ -602,7 +602,7 @@ http://username:***@example.io/abc123
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore http_com_pass_path_6 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.io/abc123
+=http://username:abc123@example.io/abc123
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore http_com_pass_path_6 quotes cliRedact > must match snapshot 1`] = `
@@ -610,7 +610,7 @@ exports[`test/suite.js TAP cli redact httpUrlCore http_com_pass_path_6 quotes cl
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore http_com_pass_path_6 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.io/abc123 http://username:***@example.io/abc123
+http://username:***@example.io/abc123 http://username:abc123@example.io/abc123
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore http_com_up_same_6 just cliRedact > must match snapshot 1`] = `
@@ -618,7 +618,7 @@ http://abc123:***@example.io
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore http_com_up_same_6 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://abc123:***@example.io
+=http://abc123:abc123@example.io
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore http_com_up_same_6 quotes cliRedact > must match snapshot 1`] = `
@@ -626,7 +626,7 @@ exports[`test/suite.js TAP cli redact httpUrlCore http_com_up_same_6 quotes cliR
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore http_com_up_same_6 two cliRedact > must match snapshot 1`] = `
-http://abc123:***@example.io http://abc123:***@example.io
+http://abc123:abc123@example.io http://abc123:abc123@example.io
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore http_com_with_params_6 just cliRedact > must match snapshot 1`] = `
@@ -634,7 +634,7 @@ http://username:***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore http_com_with_params_6 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.com/?param1=value1&param2=value2
+=http://username:abc123@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore http_com_with_params_6 quotes cliRedact > must match snapshot 1`] = `
@@ -642,7 +642,7 @@ exports[`test/suite.js TAP cli redact httpUrlCore http_com_with_params_6 quotes 
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore http_com_with_params_6 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.com/?param1=value1&param2=value2 http://username:***@example.com/?param1=value1&param2=value2
+http://username:***@example.com/?param1=value1&param2=value2 http://username:abc123@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore http_io_6 just cliRedact > must match snapshot 1`] = `
@@ -650,7 +650,7 @@ http://username:***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore http_io_6 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.io/
+=http://username:abc123@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore http_io_6 quotes cliRedact > must match snapshot 1`] = `
@@ -658,7 +658,7 @@ exports[`test/suite.js TAP cli redact httpUrlCore http_io_6 quotes cliRedact > m
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore http_io_6 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.io/ http://username:***@example.io/
+http://username:***@example.io/ http://username:abc123@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore http_io_with_params_6 just cliRedact > must match snapshot 1`] = `
@@ -666,7 +666,7 @@ http://username:***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore http_io_with_params_6 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.io/?param1=value1&param2=value2
+=http://username:abc123@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore http_io_with_params_6 quotes cliRedact > must match snapshot 1`] = `
@@ -674,7 +674,7 @@ exports[`test/suite.js TAP cli redact httpUrlCore http_io_with_params_6 quotes c
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore http_io_with_params_6 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.io/?param1=value1&param2=value2 http://username:***@example.io/?param1=value1&param2=value2
+http://username:***@example.io/?param1=value1&param2=value2 http://username:abc123@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore http_no_auth just cliRedact > must match snapshot 1`] = `
@@ -714,7 +714,7 @@ https://username:***@example.com/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore https_com_6 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.com/
+=https://username:abc123@example.com/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore https_com_6 quotes cliRedact > must match snapshot 1`] = `
@@ -722,7 +722,7 @@ exports[`test/suite.js TAP cli redact httpUrlCore https_com_6 quotes cliRedact >
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore https_com_6 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.com/ https://username:***@example.com/
+https://username:***@example.com/ https://username:abc123@example.com/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore https_com_with_params_6 just cliRedact > must match snapshot 1`] = `
@@ -730,7 +730,7 @@ https://username:***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore https_com_with_params_6 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.com/?param1=value1&param2=value2
+=https://username:abc123@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore https_com_with_params_6 quotes cliRedact > must match snapshot 1`] = `
@@ -738,7 +738,7 @@ exports[`test/suite.js TAP cli redact httpUrlCore https_com_with_params_6 quotes
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore https_com_with_params_6 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.com/?param1=value1&param2=value2 https://username:***@example.com/?param1=value1&param2=value2
+https://username:***@example.com/?param1=value1&param2=value2 https://username:abc123@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore https_io_6 just cliRedact > must match snapshot 1`] = `
@@ -746,7 +746,7 @@ https://username:***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore https_io_6 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.io/
+=https://username:abc123@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore https_io_6 quotes cliRedact > must match snapshot 1`] = `
@@ -754,7 +754,7 @@ exports[`test/suite.js TAP cli redact httpUrlCore https_io_6 quotes cliRedact > 
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore https_io_6 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.io/ https://username:***@example.io/
+https://username:***@example.io/ https://username:abc123@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore https_io_with_params_6 just cliRedact > must match snapshot 1`] = `
@@ -762,7 +762,7 @@ https://username:***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore https_io_with_params_6 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.io/?param1=value1&param2=value2
+=https://username:abc123@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore https_io_with_params_6 quotes cliRedact > must match snapshot 1`] = `
@@ -770,7 +770,7 @@ exports[`test/suite.js TAP cli redact httpUrlCore https_io_with_params_6 quotes 
 `
 
 exports[`test/suite.js TAP cli redact httpUrlCore https_io_with_params_6 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.io/?param1=value1&param2=value2 https://username:***@example.io/?param1=value1&param2=value2
+https://username:***@example.io/?param1=value1&param2=value2 https://username:abc123@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npm_36 just cliRedact > must match snapshot 1`] = `
@@ -778,7 +778,7 @@ http://username:***@example.com
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npm_36 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.com
+=http://username:npm_***@example.com
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npm_36 quotes cliRedact > must match snapshot 1`] = `
@@ -786,7 +786,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npm_36 quotes cliRedac
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npm_36 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.com http://username:***@example.com
+http://username:npm_***@example.com http://username:npm_***@example.com
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npm_42 just cliRedact > must match snapshot 1`] = `
@@ -794,7 +794,7 @@ http://username:***@example.com
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npm_42 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.com
+=http://username:npm_***@example.com
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npm_42 quotes cliRedact > must match snapshot 1`] = `
@@ -802,7 +802,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npm_42 quotes cliRedac
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npm_42 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.com http://username:***@example.com
+http://username:npm_***@example.com http://username:npm_***@example.com
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npm_48 just cliRedact > must match snapshot 1`] = `
@@ -810,7 +810,7 @@ http://username:***@example.com
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npm_48 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.com
+=http://username:npm_***@example.com
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npm_48 quotes cliRedact > must match snapshot 1`] = `
@@ -818,7 +818,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npm_48 quotes cliRedac
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npm_48 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.com http://username:***@example.com
+http://username:npm_***@example.com http://username:npm_***@example.com
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npms_36 just cliRedact > must match snapshot 1`] = `
@@ -826,7 +826,7 @@ http://username:***@example.com
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npms_36 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.com
+=http://username:npm_***@example.com
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npms_36 quotes cliRedact > must match snapshot 1`] = `
@@ -834,7 +834,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npms_36 quotes cliReda
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npms_36 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.com http://username:***@example.com
+http://username:npm_***@example.com http://username:npm_***@example.com
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npms_42 just cliRedact > must match snapshot 1`] = `
@@ -842,7 +842,7 @@ http://username:***@example.com
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npms_42 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.com
+=http://username:npm_***@example.com
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npms_42 quotes cliRedact > must match snapshot 1`] = `
@@ -850,7 +850,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npms_42 quotes cliReda
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npms_42 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.com http://username:***@example.com
+http://username:npm_***@example.com http://username:npm_***@example.com
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npms_48 just cliRedact > must match snapshot 1`] = `
@@ -858,7 +858,7 @@ http://username:***@example.com
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npms_48 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.com
+=http://username:npm_***@example.com
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npms_48 quotes cliRedact > must match snapshot 1`] = `
@@ -866,7 +866,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npms_48 quotes cliReda
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_npms_48 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.com http://username:***@example.com
+http://username:npm_***@example.com http://username:npm_***@example.com
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npm_36 just cliRedact > must match snapshot 1`] = `
@@ -874,7 +874,7 @@ http://username:***@example.io/npm_***
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npm_36 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.io/npm_***
+=http://username:npm_***@example.io/npm_***
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npm_36 quotes cliRedact > must match snapshot 1`] = `
@@ -882,7 +882,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npm_36 quote
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npm_36 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.io/npm_*** http://username:***@example.io/npm_***
+http://username:***@example.io/npm_*** http://username:npm_***@example.io/npm_***
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npm_42 just cliRedact > must match snapshot 1`] = `
@@ -890,7 +890,7 @@ http://username:***@example.io/npm_***
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npm_42 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.io/npm_***
+=http://username:npm_***@example.io/npm_***
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npm_42 quotes cliRedact > must match snapshot 1`] = `
@@ -898,7 +898,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npm_42 quote
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npm_42 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.io/npm_*** http://username:***@example.io/npm_***
+http://username:***@example.io/npm_*** http://username:npm_***@example.io/npm_***
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npm_48 just cliRedact > must match snapshot 1`] = `
@@ -906,7 +906,7 @@ http://username:***@example.io/npm_***
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npm_48 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.io/npm_***
+=http://username:npm_***@example.io/npm_***
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npm_48 quotes cliRedact > must match snapshot 1`] = `
@@ -914,7 +914,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npm_48 quote
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npm_48 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.io/npm_*** http://username:***@example.io/npm_***
+http://username:***@example.io/npm_*** http://username:npm_***@example.io/npm_***
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npms_36 just cliRedact > must match snapshot 1`] = `
@@ -922,7 +922,7 @@ http://username:***@example.io/npm_***
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npms_36 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.io/npm_***
+=http://username:npm_***@example.io/npm_***
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npms_36 quotes cliRedact > must match snapshot 1`] = `
@@ -930,7 +930,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npms_36 quot
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npms_36 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.io/npm_*** http://username:***@example.io/npm_***
+http://username:***@example.io/npm_*** http://username:npm_***@example.io/npm_***
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npms_42 just cliRedact > must match snapshot 1`] = `
@@ -938,7 +938,7 @@ http://username:***@example.io/npm_***
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npms_42 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.io/npm_***
+=http://username:npm_***@example.io/npm_***
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npms_42 quotes cliRedact > must match snapshot 1`] = `
@@ -946,7 +946,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npms_42 quot
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npms_42 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.io/npm_*** http://username:***@example.io/npm_***
+http://username:***@example.io/npm_*** http://username:npm_***@example.io/npm_***
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npms_48 just cliRedact > must match snapshot 1`] = `
@@ -954,7 +954,7 @@ http://username:***@example.io/npm_***
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npms_48 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.io/npm_***
+=http://username:npm_***@example.io/npm_***
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npms_48 quotes cliRedact > must match snapshot 1`] = `
@@ -962,7 +962,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npms_48 quot
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_pass_path_npms_48 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.io/npm_*** http://username:***@example.io/npm_***
+http://username:***@example.io/npm_*** http://username:npm_***@example.io/npm_***
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npm_36 just cliRedact > must match snapshot 1`] = `
@@ -970,7 +970,7 @@ http://npm_***:***@example.io
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npm_36 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://npm_***:***@example.io
+=http://npm_***:npm_***@example.io
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npm_36 quotes cliRedact > must match snapshot 1`] = `
@@ -978,7 +978,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npm_36 quotes 
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npm_36 two cliRedact > must match snapshot 1`] = `
-http://npm_***:***@example.io http://npm_***:***@example.io
+http://npm_***:npm_***@example.io http://npm_***:npm_***@example.io
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npm_42 just cliRedact > must match snapshot 1`] = `
@@ -986,7 +986,7 @@ http://npm_***:***@example.io
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npm_42 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://npm_***:***@example.io
+=http://npm_***:npm_***@example.io
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npm_42 quotes cliRedact > must match snapshot 1`] = `
@@ -994,7 +994,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npm_42 quotes 
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npm_42 two cliRedact > must match snapshot 1`] = `
-http://npm_***:***@example.io http://npm_***:***@example.io
+http://npm_***:npm_***@example.io http://npm_***:npm_***@example.io
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npm_48 just cliRedact > must match snapshot 1`] = `
@@ -1002,7 +1002,7 @@ http://npm_***:***@example.io
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npm_48 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://npm_***:***@example.io
+=http://npm_***:npm_***@example.io
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npm_48 quotes cliRedact > must match snapshot 1`] = `
@@ -1010,7 +1010,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npm_48 quotes 
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npm_48 two cliRedact > must match snapshot 1`] = `
-http://npm_***:***@example.io http://npm_***:***@example.io
+http://npm_***:npm_***@example.io http://npm_***:npm_***@example.io
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npms_36 just cliRedact > must match snapshot 1`] = `
@@ -1018,7 +1018,7 @@ http://npm_***:***@example.io
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npms_36 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://npm_***:***@example.io
+=http://npm_***:npm_***@example.io
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npms_36 quotes cliRedact > must match snapshot 1`] = `
@@ -1026,7 +1026,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npms_36 quotes
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npms_36 two cliRedact > must match snapshot 1`] = `
-http://npm_***:***@example.io http://npm_***:***@example.io
+http://npm_***:npm_***@example.io http://npm_***:npm_***@example.io
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npms_42 just cliRedact > must match snapshot 1`] = `
@@ -1034,7 +1034,7 @@ http://npm_***:***@example.io
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npms_42 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://npm_***:***@example.io
+=http://npm_***:npm_***@example.io
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npms_42 quotes cliRedact > must match snapshot 1`] = `
@@ -1042,7 +1042,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npms_42 quotes
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npms_42 two cliRedact > must match snapshot 1`] = `
-http://npm_***:***@example.io http://npm_***:***@example.io
+http://npm_***:npm_***@example.io http://npm_***:npm_***@example.io
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npms_48 just cliRedact > must match snapshot 1`] = `
@@ -1050,7 +1050,7 @@ http://npm_***:***@example.io
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npms_48 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://npm_***:***@example.io
+=http://npm_***:npm_***@example.io
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npms_48 quotes cliRedact > must match snapshot 1`] = `
@@ -1058,7 +1058,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npms_48 quotes
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_up_same_npms_48 two cliRedact > must match snapshot 1`] = `
-http://npm_***:***@example.io http://npm_***:***@example.io
+http://npm_***:npm_***@example.io http://npm_***:npm_***@example.io
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npm_36 just cliRedact > must match snapshot 1`] = `
@@ -1066,7 +1066,7 @@ http://username:***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npm_36 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.com/?param1=value1&param2=value2
+=http://username:npm_***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npm_36 quotes cliRedact > must match snapshot 1`] = `
@@ -1074,7 +1074,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npm_36 quo
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npm_36 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.com/?param1=value1&param2=value2 http://username:***@example.com/?param1=value1&param2=value2
+http://username:***@example.com/?param1=value1&param2=value2 http://username:npm_***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npm_42 just cliRedact > must match snapshot 1`] = `
@@ -1082,7 +1082,7 @@ http://username:***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npm_42 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.com/?param1=value1&param2=value2
+=http://username:npm_***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npm_42 quotes cliRedact > must match snapshot 1`] = `
@@ -1090,7 +1090,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npm_42 quo
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npm_42 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.com/?param1=value1&param2=value2 http://username:***@example.com/?param1=value1&param2=value2
+http://username:***@example.com/?param1=value1&param2=value2 http://username:npm_***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npm_48 just cliRedact > must match snapshot 1`] = `
@@ -1098,7 +1098,7 @@ http://username:***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npm_48 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.com/?param1=value1&param2=value2
+=http://username:npm_***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npm_48 quotes cliRedact > must match snapshot 1`] = `
@@ -1106,7 +1106,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npm_48 quo
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npm_48 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.com/?param1=value1&param2=value2 http://username:***@example.com/?param1=value1&param2=value2
+http://username:***@example.com/?param1=value1&param2=value2 http://username:npm_***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npms_36 just cliRedact > must match snapshot 1`] = `
@@ -1114,7 +1114,7 @@ http://username:***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npms_36 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.com/?param1=value1&param2=value2
+=http://username:npm_***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npms_36 quotes cliRedact > must match snapshot 1`] = `
@@ -1122,7 +1122,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npms_36 qu
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npms_36 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.com/?param1=value1&param2=value2 http://username:***@example.com/?param1=value1&param2=value2
+http://username:***@example.com/?param1=value1&param2=value2 http://username:npm_***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npms_42 just cliRedact > must match snapshot 1`] = `
@@ -1130,7 +1130,7 @@ http://username:***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npms_42 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.com/?param1=value1&param2=value2
+=http://username:npm_***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npms_42 quotes cliRedact > must match snapshot 1`] = `
@@ -1138,7 +1138,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npms_42 qu
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npms_42 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.com/?param1=value1&param2=value2 http://username:***@example.com/?param1=value1&param2=value2
+http://username:***@example.com/?param1=value1&param2=value2 http://username:npm_***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npms_48 just cliRedact > must match snapshot 1`] = `
@@ -1146,7 +1146,7 @@ http://username:***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npms_48 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.com/?param1=value1&param2=value2
+=http://username:npm_***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npms_48 quotes cliRedact > must match snapshot 1`] = `
@@ -1154,7 +1154,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npms_48 qu
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_com_with_params_npms_48 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.com/?param1=value1&param2=value2 http://username:***@example.com/?param1=value1&param2=value2
+http://username:***@example.com/?param1=value1&param2=value2 http://username:npm_***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npm_36 just cliRedact > must match snapshot 1`] = `
@@ -1162,7 +1162,7 @@ http://username:***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npm_36 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.io/
+=http://username:npm_***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npm_36 quotes cliRedact > must match snapshot 1`] = `
@@ -1170,7 +1170,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npm_36 quotes cliRedact
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npm_36 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.io/ http://username:***@example.io/
+http://username:***@example.io/ http://username:npm_***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npm_42 just cliRedact > must match snapshot 1`] = `
@@ -1178,7 +1178,7 @@ http://username:***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npm_42 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.io/
+=http://username:npm_***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npm_42 quotes cliRedact > must match snapshot 1`] = `
@@ -1186,7 +1186,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npm_42 quotes cliRedact
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npm_42 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.io/ http://username:***@example.io/
+http://username:***@example.io/ http://username:npm_***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npm_48 just cliRedact > must match snapshot 1`] = `
@@ -1194,7 +1194,7 @@ http://username:***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npm_48 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.io/
+=http://username:npm_***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npm_48 quotes cliRedact > must match snapshot 1`] = `
@@ -1202,7 +1202,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npm_48 quotes cliRedact
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npm_48 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.io/ http://username:***@example.io/
+http://username:***@example.io/ http://username:npm_***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npms_36 just cliRedact > must match snapshot 1`] = `
@@ -1210,7 +1210,7 @@ http://username:***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npms_36 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.io/
+=http://username:npm_***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npms_36 quotes cliRedact > must match snapshot 1`] = `
@@ -1218,7 +1218,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npms_36 quotes cliRedac
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npms_36 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.io/ http://username:***@example.io/
+http://username:***@example.io/ http://username:npm_***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npms_42 just cliRedact > must match snapshot 1`] = `
@@ -1226,7 +1226,7 @@ http://username:***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npms_42 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.io/
+=http://username:npm_***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npms_42 quotes cliRedact > must match snapshot 1`] = `
@@ -1234,7 +1234,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npms_42 quotes cliRedac
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npms_42 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.io/ http://username:***@example.io/
+http://username:***@example.io/ http://username:npm_***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npms_48 just cliRedact > must match snapshot 1`] = `
@@ -1242,7 +1242,7 @@ http://username:***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npms_48 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.io/
+=http://username:npm_***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npms_48 quotes cliRedact > must match snapshot 1`] = `
@@ -1250,7 +1250,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npms_48 quotes cliRedac
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_npms_48 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.io/ http://username:***@example.io/
+http://username:***@example.io/ http://username:npm_***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npm_36 just cliRedact > must match snapshot 1`] = `
@@ -1258,7 +1258,7 @@ http://username:***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npm_36 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.io/?param1=value1&param2=value2
+=http://username:npm_***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npm_36 quotes cliRedact > must match snapshot 1`] = `
@@ -1266,7 +1266,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npm_36 quot
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npm_36 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.io/?param1=value1&param2=value2 http://username:***@example.io/?param1=value1&param2=value2
+http://username:***@example.io/?param1=value1&param2=value2 http://username:npm_***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npm_42 just cliRedact > must match snapshot 1`] = `
@@ -1274,7 +1274,7 @@ http://username:***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npm_42 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.io/?param1=value1&param2=value2
+=http://username:npm_***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npm_42 quotes cliRedact > must match snapshot 1`] = `
@@ -1282,7 +1282,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npm_42 quot
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npm_42 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.io/?param1=value1&param2=value2 http://username:***@example.io/?param1=value1&param2=value2
+http://username:***@example.io/?param1=value1&param2=value2 http://username:npm_***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npm_48 just cliRedact > must match snapshot 1`] = `
@@ -1290,7 +1290,7 @@ http://username:***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npm_48 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.io/?param1=value1&param2=value2
+=http://username:npm_***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npm_48 quotes cliRedact > must match snapshot 1`] = `
@@ -1298,7 +1298,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npm_48 quot
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npm_48 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.io/?param1=value1&param2=value2 http://username:***@example.io/?param1=value1&param2=value2
+http://username:***@example.io/?param1=value1&param2=value2 http://username:npm_***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npms_36 just cliRedact > must match snapshot 1`] = `
@@ -1306,7 +1306,7 @@ http://username:***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npms_36 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.io/?param1=value1&param2=value2
+=http://username:npm_***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npms_36 quotes cliRedact > must match snapshot 1`] = `
@@ -1314,7 +1314,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npms_36 quo
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npms_36 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.io/?param1=value1&param2=value2 http://username:***@example.io/?param1=value1&param2=value2
+http://username:***@example.io/?param1=value1&param2=value2 http://username:npm_***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npms_42 just cliRedact > must match snapshot 1`] = `
@@ -1322,7 +1322,7 @@ http://username:***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npms_42 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.io/?param1=value1&param2=value2
+=http://username:npm_***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npms_42 quotes cliRedact > must match snapshot 1`] = `
@@ -1330,7 +1330,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npms_42 quo
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npms_42 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.io/?param1=value1&param2=value2 http://username:***@example.io/?param1=value1&param2=value2
+http://username:***@example.io/?param1=value1&param2=value2 http://username:npm_***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npms_48 just cliRedact > must match snapshot 1`] = `
@@ -1338,7 +1338,7 @@ http://username:***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npms_48 prefixedEqual cliRedact > must match snapshot 1`] = `
-=http://username:***@example.io/?param1=value1&param2=value2
+=http://username:npm_***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npms_48 quotes cliRedact > must match snapshot 1`] = `
@@ -1346,7 +1346,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npms_48 quo
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm http_io_with_params_npms_48 two cliRedact > must match snapshot 1`] = `
-http://username:***@example.io/?param1=value1&param2=value2 http://username:***@example.io/?param1=value1&param2=value2
+http://username:***@example.io/?param1=value1&param2=value2 http://username:npm_***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npm_36 just cliRedact > must match snapshot 1`] = `
@@ -1354,7 +1354,7 @@ https://username:***@example.com/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npm_36 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.com/
+=https://username:npm_***@example.com/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npm_36 quotes cliRedact > must match snapshot 1`] = `
@@ -1362,7 +1362,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npm_36 quotes cliReda
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npm_36 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.com/ https://username:***@example.com/
+https://username:***@example.com/ https://username:npm_***@example.com/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npm_42 just cliRedact > must match snapshot 1`] = `
@@ -1370,7 +1370,7 @@ https://username:***@example.com/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npm_42 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.com/
+=https://username:npm_***@example.com/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npm_42 quotes cliRedact > must match snapshot 1`] = `
@@ -1378,7 +1378,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npm_42 quotes cliReda
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npm_42 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.com/ https://username:***@example.com/
+https://username:***@example.com/ https://username:npm_***@example.com/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npm_48 just cliRedact > must match snapshot 1`] = `
@@ -1386,7 +1386,7 @@ https://username:***@example.com/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npm_48 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.com/
+=https://username:npm_***@example.com/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npm_48 quotes cliRedact > must match snapshot 1`] = `
@@ -1394,7 +1394,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npm_48 quotes cliReda
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npm_48 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.com/ https://username:***@example.com/
+https://username:***@example.com/ https://username:npm_***@example.com/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npms_36 just cliRedact > must match snapshot 1`] = `
@@ -1402,7 +1402,7 @@ https://username:***@example.com/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npms_36 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.com/
+=https://username:npm_***@example.com/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npms_36 quotes cliRedact > must match snapshot 1`] = `
@@ -1410,7 +1410,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npms_36 quotes cliRed
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npms_36 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.com/ https://username:***@example.com/
+https://username:***@example.com/ https://username:npm_***@example.com/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npms_42 just cliRedact > must match snapshot 1`] = `
@@ -1418,7 +1418,7 @@ https://username:***@example.com/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npms_42 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.com/
+=https://username:npm_***@example.com/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npms_42 quotes cliRedact > must match snapshot 1`] = `
@@ -1426,7 +1426,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npms_42 quotes cliRed
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npms_42 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.com/ https://username:***@example.com/
+https://username:***@example.com/ https://username:npm_***@example.com/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npms_48 just cliRedact > must match snapshot 1`] = `
@@ -1434,7 +1434,7 @@ https://username:***@example.com/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npms_48 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.com/
+=https://username:npm_***@example.com/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npms_48 quotes cliRedact > must match snapshot 1`] = `
@@ -1442,7 +1442,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npms_48 quotes cliRed
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_npms_48 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.com/ https://username:***@example.com/
+https://username:***@example.com/ https://username:npm_***@example.com/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npm_36 just cliRedact > must match snapshot 1`] = `
@@ -1450,7 +1450,7 @@ https://username:***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npm_36 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.com/?param1=value1&param2=value2
+=https://username:npm_***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npm_36 quotes cliRedact > must match snapshot 1`] = `
@@ -1458,7 +1458,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npm_36 qu
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npm_36 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.com/?param1=value1&param2=value2 https://username:***@example.com/?param1=value1&param2=value2
+https://username:***@example.com/?param1=value1&param2=value2 https://username:npm_***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npm_42 just cliRedact > must match snapshot 1`] = `
@@ -1466,7 +1466,7 @@ https://username:***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npm_42 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.com/?param1=value1&param2=value2
+=https://username:npm_***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npm_42 quotes cliRedact > must match snapshot 1`] = `
@@ -1474,7 +1474,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npm_42 qu
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npm_42 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.com/?param1=value1&param2=value2 https://username:***@example.com/?param1=value1&param2=value2
+https://username:***@example.com/?param1=value1&param2=value2 https://username:npm_***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npm_48 just cliRedact > must match snapshot 1`] = `
@@ -1482,7 +1482,7 @@ https://username:***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npm_48 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.com/?param1=value1&param2=value2
+=https://username:npm_***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npm_48 quotes cliRedact > must match snapshot 1`] = `
@@ -1490,7 +1490,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npm_48 qu
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npm_48 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.com/?param1=value1&param2=value2 https://username:***@example.com/?param1=value1&param2=value2
+https://username:***@example.com/?param1=value1&param2=value2 https://username:npm_***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npms_36 just cliRedact > must match snapshot 1`] = `
@@ -1498,7 +1498,7 @@ https://username:***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npms_36 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.com/?param1=value1&param2=value2
+=https://username:npm_***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npms_36 quotes cliRedact > must match snapshot 1`] = `
@@ -1506,7 +1506,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npms_36 q
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npms_36 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.com/?param1=value1&param2=value2 https://username:***@example.com/?param1=value1&param2=value2
+https://username:***@example.com/?param1=value1&param2=value2 https://username:npm_***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npms_42 just cliRedact > must match snapshot 1`] = `
@@ -1514,7 +1514,7 @@ https://username:***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npms_42 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.com/?param1=value1&param2=value2
+=https://username:npm_***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npms_42 quotes cliRedact > must match snapshot 1`] = `
@@ -1522,7 +1522,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npms_42 q
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npms_42 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.com/?param1=value1&param2=value2 https://username:***@example.com/?param1=value1&param2=value2
+https://username:***@example.com/?param1=value1&param2=value2 https://username:npm_***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npms_48 just cliRedact > must match snapshot 1`] = `
@@ -1530,7 +1530,7 @@ https://username:***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npms_48 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.com/?param1=value1&param2=value2
+=https://username:npm_***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npms_48 quotes cliRedact > must match snapshot 1`] = `
@@ -1538,7 +1538,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npms_48 q
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_com_with_params_npms_48 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.com/?param1=value1&param2=value2 https://username:***@example.com/?param1=value1&param2=value2
+https://username:***@example.com/?param1=value1&param2=value2 https://username:npm_***@example.com/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npm_36 just cliRedact > must match snapshot 1`] = `
@@ -1546,7 +1546,7 @@ https://username:***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npm_36 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.io/
+=https://username:npm_***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npm_36 quotes cliRedact > must match snapshot 1`] = `
@@ -1554,7 +1554,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npm_36 quotes cliRedac
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npm_36 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.io/ https://username:***@example.io/
+https://username:***@example.io/ https://username:npm_***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npm_42 just cliRedact > must match snapshot 1`] = `
@@ -1562,7 +1562,7 @@ https://username:***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npm_42 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.io/
+=https://username:npm_***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npm_42 quotes cliRedact > must match snapshot 1`] = `
@@ -1570,7 +1570,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npm_42 quotes cliRedac
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npm_42 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.io/ https://username:***@example.io/
+https://username:***@example.io/ https://username:npm_***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npm_48 just cliRedact > must match snapshot 1`] = `
@@ -1578,7 +1578,7 @@ https://username:***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npm_48 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.io/
+=https://username:npm_***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npm_48 quotes cliRedact > must match snapshot 1`] = `
@@ -1586,7 +1586,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npm_48 quotes cliRedac
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npm_48 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.io/ https://username:***@example.io/
+https://username:***@example.io/ https://username:npm_***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npms_36 just cliRedact > must match snapshot 1`] = `
@@ -1594,7 +1594,7 @@ https://username:***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npms_36 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.io/
+=https://username:npm_***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npms_36 quotes cliRedact > must match snapshot 1`] = `
@@ -1602,7 +1602,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npms_36 quotes cliReda
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npms_36 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.io/ https://username:***@example.io/
+https://username:***@example.io/ https://username:npm_***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npms_42 just cliRedact > must match snapshot 1`] = `
@@ -1610,7 +1610,7 @@ https://username:***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npms_42 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.io/
+=https://username:npm_***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npms_42 quotes cliRedact > must match snapshot 1`] = `
@@ -1618,7 +1618,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npms_42 quotes cliReda
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npms_42 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.io/ https://username:***@example.io/
+https://username:***@example.io/ https://username:npm_***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npms_48 just cliRedact > must match snapshot 1`] = `
@@ -1626,7 +1626,7 @@ https://username:***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npms_48 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.io/
+=https://username:npm_***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npms_48 quotes cliRedact > must match snapshot 1`] = `
@@ -1634,7 +1634,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npms_48 quotes cliReda
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_npms_48 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.io/ https://username:***@example.io/
+https://username:***@example.io/ https://username:npm_***@example.io/
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npm_36 just cliRedact > must match snapshot 1`] = `
@@ -1642,7 +1642,7 @@ https://username:***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npm_36 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.io/?param1=value1&param2=value2
+=https://username:npm_***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npm_36 quotes cliRedact > must match snapshot 1`] = `
@@ -1650,7 +1650,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npm_36 quo
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npm_36 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.io/?param1=value1&param2=value2 https://username:***@example.io/?param1=value1&param2=value2
+https://username:***@example.io/?param1=value1&param2=value2 https://username:npm_***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npm_42 just cliRedact > must match snapshot 1`] = `
@@ -1658,7 +1658,7 @@ https://username:***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npm_42 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.io/?param1=value1&param2=value2
+=https://username:npm_***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npm_42 quotes cliRedact > must match snapshot 1`] = `
@@ -1666,7 +1666,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npm_42 quo
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npm_42 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.io/?param1=value1&param2=value2 https://username:***@example.io/?param1=value1&param2=value2
+https://username:***@example.io/?param1=value1&param2=value2 https://username:npm_***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npm_48 just cliRedact > must match snapshot 1`] = `
@@ -1674,7 +1674,7 @@ https://username:***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npm_48 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.io/?param1=value1&param2=value2
+=https://username:npm_***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npm_48 quotes cliRedact > must match snapshot 1`] = `
@@ -1682,7 +1682,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npm_48 quo
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npm_48 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.io/?param1=value1&param2=value2 https://username:***@example.io/?param1=value1&param2=value2
+https://username:***@example.io/?param1=value1&param2=value2 https://username:npm_***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npms_36 just cliRedact > must match snapshot 1`] = `
@@ -1690,7 +1690,7 @@ https://username:***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npms_36 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.io/?param1=value1&param2=value2
+=https://username:npm_***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npms_36 quotes cliRedact > must match snapshot 1`] = `
@@ -1698,7 +1698,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npms_36 qu
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npms_36 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.io/?param1=value1&param2=value2 https://username:***@example.io/?param1=value1&param2=value2
+https://username:***@example.io/?param1=value1&param2=value2 https://username:npm_***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npms_42 just cliRedact > must match snapshot 1`] = `
@@ -1706,7 +1706,7 @@ https://username:***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npms_42 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.io/?param1=value1&param2=value2
+=https://username:npm_***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npms_42 quotes cliRedact > must match snapshot 1`] = `
@@ -1714,7 +1714,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npms_42 qu
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npms_42 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.io/?param1=value1&param2=value2 https://username:***@example.io/?param1=value1&param2=value2
+https://username:***@example.io/?param1=value1&param2=value2 https://username:npm_***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npms_48 just cliRedact > must match snapshot 1`] = `
@@ -1722,7 +1722,7 @@ https://username:***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npms_48 prefixedEqual cliRedact > must match snapshot 1`] = `
-=https://username:***@example.io/?param1=value1&param2=value2
+=https://username:npm_***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npms_48 quotes cliRedact > must match snapshot 1`] = `
@@ -1730,7 +1730,7 @@ exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npms_48 qu
 `
 
 exports[`test/suite.js TAP cli redact httpUrlNpm https_io_with_params_npms_48 two cliRedact > must match snapshot 1`] = `
-https://username:***@example.io/?param1=value1&param2=value2 https://username:***@example.io/?param1=value1&param2=value2
+https://username:***@example.io/?param1=value1&param2=value2 https://username:npm_***@example.io/?param1=value1&param2=value2
 `
 
 exports[`test/suite.js TAP cli redact jsonWebToken jwt_HS256_1033 just cliRedact > must match snapshot 1`] = `

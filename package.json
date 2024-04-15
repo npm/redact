@@ -36,7 +36,8 @@
     "nyc-arg": [
       "--exclude",
       "tap-snapshots/**"
-    ]
+    ],
+    "timeout": 120
   },
   "devDependencies": {
     "@npmcli/eslint-config": "^4.0.2",
