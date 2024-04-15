@@ -3,6 +3,7 @@
 const matchers = require('../lib/matchers')
 const t = require('tap')
 const examples = require('./fixtures/examples')
+const { asterisk, redactUrlPassword } = require('../lib/utils')
 
 t.same(
   examples.NPM_SECRET.npm_36.replace(matchers.NPM_SECRET.pattern, matchers.NPM_SECRET.replacement),
@@ -67,4 +68,14 @@ t.same(
 t.same(
   examples.UUID.uuid_v1.replace(matchers.UUID.pattern, matchers.UUID.fixed),
   '********-********-********-********-********'
+)
+
+t.same(
+  redactUrlPassword(examples.HTTP_URL_CORE.http_com_pass_path_6),
+  `http://username:${asterisk()}@example.io/${examples.test6}`
+)
+
+t.same(
+  redactUrlPassword(examples.HTTP_URL_CORE.http_com_up_same_6),
+  `http://${examples.test6}:${asterisk()}@example.io`
 )

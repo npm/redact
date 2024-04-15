@@ -56,6 +56,8 @@ const genHttpUrl = (test, key = test.length) => ({
   [`https_io_with_params_${key}`]: `https://username:${test}@example.io/?param1=value1&param2=value2`,
   [`http_io_${key}`]: `http://username:${test}@example.io/`,
   [`http_io_with_params_${key}`]: `http://username:${test}@example.io/?param1=value1&param2=value2`,
+  [`http_com_pass_path_${key}`]: `http://username:${test}@example.io/${test}`,
+  [`http_com_up_same_${key}`]: `http://${test}:${test}@example.io`,
 })
 
 const HTTP_URL_CORE = {
@@ -86,4 +88,5 @@ module.exports = {
   HTTP_URL_CORE,
   HTTP_URL_NPM,
   UUID,
+  test6,
 }
