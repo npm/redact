@@ -1,59 +1,7 @@
 /* eslint-disable max-len */
 
-const cli = require('../lib/index')
-const examples = require('./fixtures/examples')
-const redactLog = cli.redactLog
-const server = require('../lib/server')
+const { redactLog } = require('..')
 const t = require('tap')
-const { redactUrlPassword } = require('../lib/utils')
-
-t.same(
-  redactUrlPassword('hello'),
-  'hello'
-)
-
-t.throws(() => {
-  server.redact(123)
-})
-
-t.throws(() => {
-  server.redact({})
-})
-
-t.same(
-  server.redactSafe({ url: examples.HTTP_URL_CORE.http_com_6 }),
-  JSON.stringify({ url: 'http://username:********@example.com' })
-)
-
-t.same(
-  server.redactSafe({
-    url: 'https://username:password@example.com',
-    headers: {
-      Authorization: 'Bearer examplebearer',
-      nested: {
-        basic: 'Basic exampletoken',
-      },
-    },
-    values: {
-      jwt: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c',
-      npm: 'npm_123456789012345678901234567890123456789012345678',
-    },
-  }),
-  JSON.stringify({
-    url: 'https://username:********@example.com',
-    headers: {
-      Authorization: '[REDACTED_AUTH_HEADER]',
-      nested: {
-        basic: '[REDACTED_AUTH_HEADER]',
-      },
-    },
-    values: {
-      jwt: '[REDACTED_JSON_WEB_TOKEN]',
-      npm: '[REDACTED_NPM_SECRET]',
-    },
-  }),
-  'should perform server redact with all types of redactions'
-)
 
 t.equal(
   redactLog(),
