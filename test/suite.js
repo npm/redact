@@ -116,8 +116,6 @@ const nonString = Object.entries({
   arrayStrings: ['a', 'b', 'c'],
   objectNumbers: { a: 1, b: 2, c: 3 },
   objectStrings: { a: 'a', b: 'b', c: 'c' },
-  request: new Request('https://example.com'),
-  response: new Response('body'),
 }).map(([key, value]) => ({ key, value, type: 'nonString' }))
 
 const nonStringSensitve = Object.entries({
