@@ -597,6 +597,22 @@ exports[`test/suite.js TAP cli redact log httpUrlCore http_com_6 two httpUrlCore
 http://username:***@example.com http://username:***@example.com
 `
 
+exports[`test/suite.js TAP cli redact log httpUrlCore http_com_encoded_char just httpUrlCore/http_com_encoded_char/just/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.com
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_com_encoded_char prefixedEqual httpUrlCore/http_com_encoded_char/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=http://username:***@example.com
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_com_encoded_char quotes httpUrlCore/http_com_encoded_char/quotes/cliRedactLog > must match snapshot 1`] = `
+"http://username:pass[word]@example.com"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_com_encoded_char two httpUrlCore/http_com_encoded_char/two/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.com http://username:***@example.com
+`
+
 exports[`test/suite.js TAP cli redact log httpUrlCore http_com_pass_path_6 just httpUrlCore/http_com_pass_path_6/just/cliRedactLog > must match snapshot 1`] = `
 http://username:***@example.io/abc123
 `
@@ -611,6 +627,22 @@ exports[`test/suite.js TAP cli redact log httpUrlCore http_com_pass_path_6 quote
 
 exports[`test/suite.js TAP cli redact log httpUrlCore http_com_pass_path_6 two httpUrlCore/http_com_pass_path_6/two/cliRedactLog > must match snapshot 1`] = `
 http://username:***@example.io/abc123 http://username:***@example.io/abc123
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_com_pass_path_encoded_char just httpUrlCore/http_com_pass_path_encoded_char/just/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.io/pass[word]
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_com_pass_path_encoded_char prefixedEqual httpUrlCore/http_com_pass_path_encoded_char/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=http://username:***@example.io/pass[word]
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_com_pass_path_encoded_char quotes httpUrlCore/http_com_pass_path_encoded_char/quotes/cliRedactLog > must match snapshot 1`] = `
+"http://username:pass[word]@example.io/pass[word]"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_com_pass_path_encoded_char two httpUrlCore/http_com_pass_path_encoded_char/two/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.io/pass[word] http://username:***@example.io/pass[word]
 `
 
 exports[`test/suite.js TAP cli redact log httpUrlCore http_com_up_same_6 just httpUrlCore/http_com_up_same_6/just/cliRedactLog > must match snapshot 1`] = `
@@ -629,6 +661,22 @@ exports[`test/suite.js TAP cli redact log httpUrlCore http_com_up_same_6 two htt
 http://abc123:***@example.io http://abc123:***@example.io
 `
 
+exports[`test/suite.js TAP cli redact log httpUrlCore http_com_up_same_encoded_char just httpUrlCore/http_com_up_same_encoded_char/just/cliRedactLog > must match snapshot 1`] = `
+http://pass[word]:***@example.io
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_com_up_same_encoded_char prefixedEqual httpUrlCore/http_com_up_same_encoded_char/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=http://pass[word]:***@example.io
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_com_up_same_encoded_char quotes httpUrlCore/http_com_up_same_encoded_char/quotes/cliRedactLog > must match snapshot 1`] = `
+"http://pass[word]:pass[word]@example.io"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_com_up_same_encoded_char two httpUrlCore/http_com_up_same_encoded_char/two/cliRedactLog > must match snapshot 1`] = `
+http://pass[word]:***@example.io http://pass[word]:***@example.io
+`
+
 exports[`test/suite.js TAP cli redact log httpUrlCore http_com_with_params_6 just httpUrlCore/http_com_with_params_6/just/cliRedactLog > must match snapshot 1`] = `
 http://username:***@example.com/?param1=value1&param2=value2
 `
@@ -642,6 +690,22 @@ exports[`test/suite.js TAP cli redact log httpUrlCore http_com_with_params_6 quo
 `
 
 exports[`test/suite.js TAP cli redact log httpUrlCore http_com_with_params_6 two httpUrlCore/http_com_with_params_6/two/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.com/?param1=value1&param2=value2 http://username:***@example.com/?param1=value1&param2=value2
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_com_with_params_encoded_char just httpUrlCore/http_com_with_params_encoded_char/just/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.com/?param1=value1&param2=value2
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_com_with_params_encoded_char prefixedEqual httpUrlCore/http_com_with_params_encoded_char/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=http://username:***@example.com/?param1=value1&param2=value2
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_com_with_params_encoded_char quotes httpUrlCore/http_com_with_params_encoded_char/quotes/cliRedactLog > must match snapshot 1`] = `
+"http://username:pass[word]@example.com/?param1=value1&param2=value2"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_com_with_params_encoded_char two httpUrlCore/http_com_with_params_encoded_char/two/cliRedactLog > must match snapshot 1`] = `
 http://username:***@example.com/?param1=value1&param2=value2 http://username:***@example.com/?param1=value1&param2=value2
 `
 
@@ -661,6 +725,22 @@ exports[`test/suite.js TAP cli redact log httpUrlCore http_io_6 two httpUrlCore/
 http://username:***@example.io/ http://username:***@example.io/
 `
 
+exports[`test/suite.js TAP cli redact log httpUrlCore http_io_encoded_char just httpUrlCore/http_io_encoded_char/just/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.io/
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_io_encoded_char prefixedEqual httpUrlCore/http_io_encoded_char/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=http://username:***@example.io/
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_io_encoded_char quotes httpUrlCore/http_io_encoded_char/quotes/cliRedactLog > must match snapshot 1`] = `
+"http://username:pass[word]@example.io/"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_io_encoded_char two httpUrlCore/http_io_encoded_char/two/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.io/ http://username:***@example.io/
+`
+
 exports[`test/suite.js TAP cli redact log httpUrlCore http_io_with_params_6 just httpUrlCore/http_io_with_params_6/just/cliRedactLog > must match snapshot 1`] = `
 http://username:***@example.io/?param1=value1&param2=value2
 `
@@ -675,6 +755,54 @@ exports[`test/suite.js TAP cli redact log httpUrlCore http_io_with_params_6 quot
 
 exports[`test/suite.js TAP cli redact log httpUrlCore http_io_with_params_6 two httpUrlCore/http_io_with_params_6/two/cliRedactLog > must match snapshot 1`] = `
 http://username:***@example.io/?param1=value1&param2=value2 http://username:***@example.io/?param1=value1&param2=value2
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_io_with_params_encoded_char just httpUrlCore/http_io_with_params_encoded_char/just/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.io/?param1=value1&param2=value2
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_io_with_params_encoded_char prefixedEqual httpUrlCore/http_io_with_params_encoded_char/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=http://username:***@example.io/?param1=value1&param2=value2
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_io_with_params_encoded_char quotes httpUrlCore/http_io_with_params_encoded_char/quotes/cliRedactLog > must match snapshot 1`] = `
+"http://username:pass[word]@example.io/?param1=value1&param2=value2"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_io_with_params_encoded_char two httpUrlCore/http_io_with_params_encoded_char/two/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.io/?param1=value1&param2=value2 http://username:***@example.io/?param1=value1&param2=value2
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_localhost_port_6 just httpUrlCore/http_localhost_port_6/just/cliRedactLog > must match snapshot 1`] = `
+http://username:***@localhost:3000
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_localhost_port_6 prefixedEqual httpUrlCore/http_localhost_port_6/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=http://username:***@localhost:3000
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_localhost_port_6 quotes httpUrlCore/http_localhost_port_6/quotes/cliRedactLog > must match snapshot 1`] = `
+"http://username:abc123@localhost:3000"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_localhost_port_6 two httpUrlCore/http_localhost_port_6/two/cliRedactLog > must match snapshot 1`] = `
+http://username:***@localhost:3000 http://username:***@localhost:3000
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_localhost_port_encoded_char just httpUrlCore/http_localhost_port_encoded_char/just/cliRedactLog > must match snapshot 1`] = `
+http://username:***@localhost:3000
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_localhost_port_encoded_char prefixedEqual httpUrlCore/http_localhost_port_encoded_char/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=http://username:***@localhost:3000
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_localhost_port_encoded_char quotes httpUrlCore/http_localhost_port_encoded_char/quotes/cliRedactLog > must match snapshot 1`] = `
+"http://username:pass[word]@localhost:3000"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_localhost_port_encoded_char two httpUrlCore/http_localhost_port_encoded_char/two/cliRedactLog > must match snapshot 1`] = `
+http://username:***@localhost:3000 http://username:***@localhost:3000
 `
 
 exports[`test/suite.js TAP cli redact log httpUrlCore http_no_auth just httpUrlCore/http_no_auth/just/cliRedactLog > must match snapshot 1`] = `
@@ -709,6 +837,38 @@ exports[`test/suite.js TAP cli redact log httpUrlCore http_no_auth_no_trailing t
 http://example.com http://example.com
 `
 
+exports[`test/suite.js TAP cli redact log httpUrlCore http_tld_port6 just httpUrlCore/http_tld_port6/just/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.com:8080
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_tld_port6 prefixedEqual httpUrlCore/http_tld_port6/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=http://username:***@example.com:8080
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_tld_port6 quotes httpUrlCore/http_tld_port6/quotes/cliRedactLog > must match snapshot 1`] = `
+"http://username:abc123@example.com:8080"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_tld_port6 two httpUrlCore/http_tld_port6/two/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.com:8080 http://username:***@example.com:8080
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_tld_portencoded_char just httpUrlCore/http_tld_portencoded_char/just/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.com:8080
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_tld_portencoded_char prefixedEqual httpUrlCore/http_tld_portencoded_char/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=http://username:***@example.com:8080
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_tld_portencoded_char quotes httpUrlCore/http_tld_portencoded_char/quotes/cliRedactLog > must match snapshot 1`] = `
+"http://username:pass[word]@example.com:8080"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore http_tld_portencoded_char two httpUrlCore/http_tld_portencoded_char/two/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.com:8080 http://username:***@example.com:8080
+`
+
 exports[`test/suite.js TAP cli redact log httpUrlCore https_com_6 just httpUrlCore/https_com_6/just/cliRedactLog > must match snapshot 1`] = `
 https://username:***@example.com/
 `
@@ -722,6 +882,22 @@ exports[`test/suite.js TAP cli redact log httpUrlCore https_com_6 quotes httpUrl
 `
 
 exports[`test/suite.js TAP cli redact log httpUrlCore https_com_6 two httpUrlCore/https_com_6/two/cliRedactLog > must match snapshot 1`] = `
+https://username:***@example.com/ https://username:***@example.com/
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore https_com_encoded_char just httpUrlCore/https_com_encoded_char/just/cliRedactLog > must match snapshot 1`] = `
+https://username:***@example.com/
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore https_com_encoded_char prefixedEqual httpUrlCore/https_com_encoded_char/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=https://username:***@example.com/
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore https_com_encoded_char quotes httpUrlCore/https_com_encoded_char/quotes/cliRedactLog > must match snapshot 1`] = `
+"https://username:pass[word]@example.com/"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore https_com_encoded_char two httpUrlCore/https_com_encoded_char/two/cliRedactLog > must match snapshot 1`] = `
 https://username:***@example.com/ https://username:***@example.com/
 `
 
@@ -741,6 +917,22 @@ exports[`test/suite.js TAP cli redact log httpUrlCore https_com_with_params_6 tw
 https://username:***@example.com/?param1=value1&param2=value2 https://username:***@example.com/?param1=value1&param2=value2
 `
 
+exports[`test/suite.js TAP cli redact log httpUrlCore https_com_with_params_encoded_char just httpUrlCore/https_com_with_params_encoded_char/just/cliRedactLog > must match snapshot 1`] = `
+https://username:***@example.com/?param1=value1&param2=value2
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore https_com_with_params_encoded_char prefixedEqual httpUrlCore/https_com_with_params_encoded_char/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=https://username:***@example.com/?param1=value1&param2=value2
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore https_com_with_params_encoded_char quotes httpUrlCore/https_com_with_params_encoded_char/quotes/cliRedactLog > must match snapshot 1`] = `
+"https://username:pass[word]@example.com/?param1=value1&param2=value2"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore https_com_with_params_encoded_char two httpUrlCore/https_com_with_params_encoded_char/two/cliRedactLog > must match snapshot 1`] = `
+https://username:***@example.com/?param1=value1&param2=value2 https://username:***@example.com/?param1=value1&param2=value2
+`
+
 exports[`test/suite.js TAP cli redact log httpUrlCore https_io_6 just httpUrlCore/https_io_6/just/cliRedactLog > must match snapshot 1`] = `
 https://username:***@example.io/
 `
@@ -757,6 +949,22 @@ exports[`test/suite.js TAP cli redact log httpUrlCore https_io_6 two httpUrlCore
 https://username:***@example.io/ https://username:***@example.io/
 `
 
+exports[`test/suite.js TAP cli redact log httpUrlCore https_io_encoded_char just httpUrlCore/https_io_encoded_char/just/cliRedactLog > must match snapshot 1`] = `
+https://username:***@example.io/
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore https_io_encoded_char prefixedEqual httpUrlCore/https_io_encoded_char/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=https://username:***@example.io/
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore https_io_encoded_char quotes httpUrlCore/https_io_encoded_char/quotes/cliRedactLog > must match snapshot 1`] = `
+"https://username:pass[word]@example.io/"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore https_io_encoded_char two httpUrlCore/https_io_encoded_char/two/cliRedactLog > must match snapshot 1`] = `
+https://username:***@example.io/ https://username:***@example.io/
+`
+
 exports[`test/suite.js TAP cli redact log httpUrlCore https_io_with_params_6 just httpUrlCore/https_io_with_params_6/just/cliRedactLog > must match snapshot 1`] = `
 https://username:***@example.io/?param1=value1&param2=value2
 `
@@ -770,6 +978,22 @@ exports[`test/suite.js TAP cli redact log httpUrlCore https_io_with_params_6 quo
 `
 
 exports[`test/suite.js TAP cli redact log httpUrlCore https_io_with_params_6 two httpUrlCore/https_io_with_params_6/two/cliRedactLog > must match snapshot 1`] = `
+https://username:***@example.io/?param1=value1&param2=value2 https://username:***@example.io/?param1=value1&param2=value2
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore https_io_with_params_encoded_char just httpUrlCore/https_io_with_params_encoded_char/just/cliRedactLog > must match snapshot 1`] = `
+https://username:***@example.io/?param1=value1&param2=value2
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore https_io_with_params_encoded_char prefixedEqual httpUrlCore/https_io_with_params_encoded_char/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=https://username:***@example.io/?param1=value1&param2=value2
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore https_io_with_params_encoded_char quotes httpUrlCore/https_io_with_params_encoded_char/quotes/cliRedactLog > must match snapshot 1`] = `
+"https://username:pass[word]@example.io/?param1=value1&param2=value2"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlCore https_io_with_params_encoded_char two httpUrlCore/https_io_with_params_encoded_char/two/cliRedactLog > must match snapshot 1`] = `
 https://username:***@example.io/?param1=value1&param2=value2 https://username:***@example.io/?param1=value1&param2=value2
 `
 
@@ -1347,6 +1571,198 @@ exports[`test/suite.js TAP cli redact log httpUrlNpm http_io_with_params_npms_48
 
 exports[`test/suite.js TAP cli redact log httpUrlNpm http_io_with_params_npms_48 two httpUrlNpm/http_io_with_params_npms_48/two/cliRedactLog > must match snapshot 1`] = `
 http://username:***@example.io/?param1=value1&param2=value2 http://username:***@example.io/?param1=value1&param2=value2
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_localhost_port_npm_36 just httpUrlNpm/http_localhost_port_npm_36/just/cliRedactLog > must match snapshot 1`] = `
+http://username:***@localhost:3000
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_localhost_port_npm_36 prefixedEqual httpUrlNpm/http_localhost_port_npm_36/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=http://username:***@localhost:3000
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_localhost_port_npm_36 quotes httpUrlNpm/http_localhost_port_npm_36/quotes/cliRedactLog > must match snapshot 1`] = `
+"http://username:npm_***@localhost:3000"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_localhost_port_npm_36 two httpUrlNpm/http_localhost_port_npm_36/two/cliRedactLog > must match snapshot 1`] = `
+http://username:***@localhost:3000 http://username:***@localhost:3000
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_localhost_port_npm_42 just httpUrlNpm/http_localhost_port_npm_42/just/cliRedactLog > must match snapshot 1`] = `
+http://username:***@localhost:3000
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_localhost_port_npm_42 prefixedEqual httpUrlNpm/http_localhost_port_npm_42/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=http://username:***@localhost:3000
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_localhost_port_npm_42 quotes httpUrlNpm/http_localhost_port_npm_42/quotes/cliRedactLog > must match snapshot 1`] = `
+"http://username:npm_***@localhost:3000"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_localhost_port_npm_42 two httpUrlNpm/http_localhost_port_npm_42/two/cliRedactLog > must match snapshot 1`] = `
+http://username:***@localhost:3000 http://username:***@localhost:3000
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_localhost_port_npm_48 just httpUrlNpm/http_localhost_port_npm_48/just/cliRedactLog > must match snapshot 1`] = `
+http://username:***@localhost:3000
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_localhost_port_npm_48 prefixedEqual httpUrlNpm/http_localhost_port_npm_48/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=http://username:***@localhost:3000
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_localhost_port_npm_48 quotes httpUrlNpm/http_localhost_port_npm_48/quotes/cliRedactLog > must match snapshot 1`] = `
+"http://username:npm_***@localhost:3000"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_localhost_port_npm_48 two httpUrlNpm/http_localhost_port_npm_48/two/cliRedactLog > must match snapshot 1`] = `
+http://username:***@localhost:3000 http://username:***@localhost:3000
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_localhost_port_npms_36 just httpUrlNpm/http_localhost_port_npms_36/just/cliRedactLog > must match snapshot 1`] = `
+http://username:***@localhost:3000
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_localhost_port_npms_36 prefixedEqual httpUrlNpm/http_localhost_port_npms_36/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=http://username:***@localhost:3000
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_localhost_port_npms_36 quotes httpUrlNpm/http_localhost_port_npms_36/quotes/cliRedactLog > must match snapshot 1`] = `
+"http://username:npm_***@localhost:3000"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_localhost_port_npms_36 two httpUrlNpm/http_localhost_port_npms_36/two/cliRedactLog > must match snapshot 1`] = `
+http://username:***@localhost:3000 http://username:***@localhost:3000
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_localhost_port_npms_42 just httpUrlNpm/http_localhost_port_npms_42/just/cliRedactLog > must match snapshot 1`] = `
+http://username:***@localhost:3000
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_localhost_port_npms_42 prefixedEqual httpUrlNpm/http_localhost_port_npms_42/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=http://username:***@localhost:3000
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_localhost_port_npms_42 quotes httpUrlNpm/http_localhost_port_npms_42/quotes/cliRedactLog > must match snapshot 1`] = `
+"http://username:npm_***@localhost:3000"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_localhost_port_npms_42 two httpUrlNpm/http_localhost_port_npms_42/two/cliRedactLog > must match snapshot 1`] = `
+http://username:***@localhost:3000 http://username:***@localhost:3000
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_localhost_port_npms_48 just httpUrlNpm/http_localhost_port_npms_48/just/cliRedactLog > must match snapshot 1`] = `
+http://username:***@localhost:3000
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_localhost_port_npms_48 prefixedEqual httpUrlNpm/http_localhost_port_npms_48/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=http://username:***@localhost:3000
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_localhost_port_npms_48 quotes httpUrlNpm/http_localhost_port_npms_48/quotes/cliRedactLog > must match snapshot 1`] = `
+"http://username:npm_***@localhost:3000"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_localhost_port_npms_48 two httpUrlNpm/http_localhost_port_npms_48/two/cliRedactLog > must match snapshot 1`] = `
+http://username:***@localhost:3000 http://username:***@localhost:3000
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_tld_portnpm_36 just httpUrlNpm/http_tld_portnpm_36/just/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.com:8080
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_tld_portnpm_36 prefixedEqual httpUrlNpm/http_tld_portnpm_36/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=http://username:***@example.com:8080
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_tld_portnpm_36 quotes httpUrlNpm/http_tld_portnpm_36/quotes/cliRedactLog > must match snapshot 1`] = `
+"http://username:npm_***@example.com:8080"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_tld_portnpm_36 two httpUrlNpm/http_tld_portnpm_36/two/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.com:8080 http://username:***@example.com:8080
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_tld_portnpm_42 just httpUrlNpm/http_tld_portnpm_42/just/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.com:8080
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_tld_portnpm_42 prefixedEqual httpUrlNpm/http_tld_portnpm_42/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=http://username:***@example.com:8080
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_tld_portnpm_42 quotes httpUrlNpm/http_tld_portnpm_42/quotes/cliRedactLog > must match snapshot 1`] = `
+"http://username:npm_***@example.com:8080"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_tld_portnpm_42 two httpUrlNpm/http_tld_portnpm_42/two/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.com:8080 http://username:***@example.com:8080
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_tld_portnpm_48 just httpUrlNpm/http_tld_portnpm_48/just/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.com:8080
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_tld_portnpm_48 prefixedEqual httpUrlNpm/http_tld_portnpm_48/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=http://username:***@example.com:8080
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_tld_portnpm_48 quotes httpUrlNpm/http_tld_portnpm_48/quotes/cliRedactLog > must match snapshot 1`] = `
+"http://username:npm_***@example.com:8080"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_tld_portnpm_48 two httpUrlNpm/http_tld_portnpm_48/two/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.com:8080 http://username:***@example.com:8080
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_tld_portnpms_36 just httpUrlNpm/http_tld_portnpms_36/just/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.com:8080
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_tld_portnpms_36 prefixedEqual httpUrlNpm/http_tld_portnpms_36/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=http://username:***@example.com:8080
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_tld_portnpms_36 quotes httpUrlNpm/http_tld_portnpms_36/quotes/cliRedactLog > must match snapshot 1`] = `
+"http://username:npm_***@example.com:8080"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_tld_portnpms_36 two httpUrlNpm/http_tld_portnpms_36/two/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.com:8080 http://username:***@example.com:8080
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_tld_portnpms_42 just httpUrlNpm/http_tld_portnpms_42/just/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.com:8080
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_tld_portnpms_42 prefixedEqual httpUrlNpm/http_tld_portnpms_42/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=http://username:***@example.com:8080
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_tld_portnpms_42 quotes httpUrlNpm/http_tld_portnpms_42/quotes/cliRedactLog > must match snapshot 1`] = `
+"http://username:npm_***@example.com:8080"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_tld_portnpms_42 two httpUrlNpm/http_tld_portnpms_42/two/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.com:8080 http://username:***@example.com:8080
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_tld_portnpms_48 just httpUrlNpm/http_tld_portnpms_48/just/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.com:8080
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_tld_portnpms_48 prefixedEqual httpUrlNpm/http_tld_portnpms_48/prefixedEqual/cliRedactLog > must match snapshot 1`] = `
+=http://username:***@example.com:8080
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_tld_portnpms_48 quotes httpUrlNpm/http_tld_portnpms_48/quotes/cliRedactLog > must match snapshot 1`] = `
+"http://username:npm_***@example.com:8080"
+`
+
+exports[`test/suite.js TAP cli redact log httpUrlNpm http_tld_portnpms_48 two httpUrlNpm/http_tld_portnpms_48/two/cliRedactLog > must match snapshot 1`] = `
+http://username:***@example.com:8080 http://username:***@example.com:8080
 `
 
 exports[`test/suite.js TAP cli redact log httpUrlNpm https_com_npm_36 just httpUrlNpm/https_com_npm_36/just/cliRedactLog > must match snapshot 1`] = `

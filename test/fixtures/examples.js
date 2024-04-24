@@ -58,12 +58,16 @@ const genHttpUrl = (test, key = test.length) => ({
   [`http_io_with_params_${key}`]: `http://username:${test}@example.io/?param1=value1&param2=value2`,
   [`http_com_pass_path_${key}`]: `http://username:${test}@example.io/${test}`,
   [`http_com_up_same_${key}`]: `http://${test}:${test}@example.io`,
+  [`http_localhost_port_${key}`]: `http://username:${test}@localhost:3000`,
+  [`http_tld_port${key}`]: `http://username:${test}@example.com:8080`,
 })
 
 const HTTP_URL_CORE = {
   http_no_auth: 'http://example.com/',
   http_no_auth_no_trailing: 'http://example.com',
   ...genHttpUrl(test6),
+  /** this adds tests to match that we would replace pass%5Bword%5D|pass\[word\] and  */
+  ...genHttpUrl('pass[word]', `encoded_char`),
 }
 
 /** @see https://www.uuidgenerator.net/guid */
