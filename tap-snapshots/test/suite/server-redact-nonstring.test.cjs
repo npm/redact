@@ -5,7 +5,7 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
-exports[`test/suite.js TAP server redact nonstring nonString arrayNumbers just nonString/arrayNumbers/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonString arrayNumbers just serverRedact > must match snapshot 1`] = `
 Array [
   1,
   2,
@@ -13,7 +13,7 @@ Array [
 ]
 `
 
-exports[`test/suite.js TAP server redact nonstring nonString arrayStrings just nonString/arrayStrings/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonString arrayStrings just serverRedact > must match snapshot 1`] = `
 Array [
   "a",
   "b",
@@ -21,25 +21,25 @@ Array [
 ]
 `
 
-exports[`test/suite.js TAP server redact nonstring nonString emptyArray just nonString/emptyArray/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonString emptyArray just serverRedact > must match snapshot 1`] = `
 Array []
 `
 
-exports[`test/suite.js TAP server redact nonstring nonString emptyObject just nonString/emptyObject/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonString emptyObject just serverRedact > must match snapshot 1`] = `
 Object {}
 `
 
-exports[`test/suite.js TAP server redact nonstring nonString exampleGetterThrows just nonString/exampleGetterThrows/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonString exampleGetterThrows just serverRedact > must match snapshot 1`] = `
 Object {
   "getter": "[error getting value: Error in getter]",
 }
 `
 
-exports[`test/suite.js TAP server redact nonstring nonString false just nonString/false/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonString false just serverRedact > must match snapshot 1`] = `
 false
 `
 
-exports[`test/suite.js TAP server redact nonstring nonString nestedArrayArray just nonString/nestedArrayArray/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonString nestedArrayArray just serverRedact > must match snapshot 1`] = `
 Array [
   1,
   Array [
@@ -48,7 +48,7 @@ Array [
 ]
 `
 
-exports[`test/suite.js TAP server redact nonstring nonString nestedArrayObject just nonString/nestedArrayObject/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonString nestedArrayObject just serverRedact > must match snapshot 1`] = `
 Array [
   1,
   Object {
@@ -57,15 +57,15 @@ Array [
 ]
 `
 
-exports[`test/suite.js TAP server redact nonstring nonString null just nonString/null/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonString null just serverRedact > must match snapshot 1`] = `
 null
 `
 
-exports[`test/suite.js TAP server redact nonstring nonString number just nonString/number/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonString number just serverRedact > must match snapshot 1`] = `
 1
 `
 
-exports[`test/suite.js TAP server redact nonstring nonString objectNumbers just nonString/objectNumbers/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonString objectNumbers just serverRedact > must match snapshot 1`] = `
 Object {
   "a": 1,
   "b": 2,
@@ -73,7 +73,7 @@ Object {
 }
 `
 
-exports[`test/suite.js TAP server redact nonstring nonString objectStrings just nonString/objectStrings/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonString objectStrings just serverRedact > must match snapshot 1`] = `
 Object {
   "a": "a",
   "b": "b",
@@ -81,15 +81,15 @@ Object {
 }
 `
 
-exports[`test/suite.js TAP server redact nonstring nonString true just nonString/true/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonString true just serverRedact > must match snapshot 1`] = `
 true
 `
 
-exports[`test/suite.js TAP server redact nonstring nonString undefined just nonString/undefined/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonString undefined just serverRedact > must match snapshot 1`] = `
 undefined
 `
 
-exports[`test/suite.js TAP server redact nonstring nonStringSensitve arrayNumbers just nonStringSensitve/arrayNumbers/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonStringSensitve arrayNumbers just serverRedact > must match snapshot 1`] = `
 Array [
   1,
   "[REDACTED_NPM_SECRET]",
@@ -97,7 +97,7 @@ Array [
 ]
 `
 
-exports[`test/suite.js TAP server redact nonstring nonStringSensitve arrayStrings just nonStringSensitve/arrayStrings/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonStringSensitve arrayStrings just serverRedact > must match snapshot 1`] = `
 Array [
   "a",
   "[REDACTED_NPM_SECRET]",
@@ -105,7 +105,7 @@ Array [
 ]
 `
 
-exports[`test/suite.js TAP server redact nonstring nonStringSensitve circular just nonStringSensitve/circular/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonStringSensitve circular just serverRedact > must match snapshot 1`] = `
 Object {
   "headers": Object {
     "Authorization": "[REDACTED_HEADER_AUTHORIZATION]",
@@ -126,7 +126,7 @@ Object {
 }
 `
 
-exports[`test/suite.js TAP server redact nonstring nonStringSensitve circularArray just nonStringSensitve/circularArray/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonStringSensitve circularArray just serverRedact > must match snapshot 1`] = `
 Array [
   1,
   2,
@@ -135,33 +135,24 @@ Array [
 ]
 `
 
-exports[`test/suite.js TAP server redact nonstring nonStringSensitve error just nonStringSensitve/error/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonStringSensitve error just serverRedact > must match snapshot 1`] = `
 Object {
   "errorType": "Error",
   "message": "Error with senstive url https://username:********@example.com/",
   "stack": String(
-    Error: Error with senstive url https://username:********@example.com/
-        at Object.<anonymous> (/Users/reggi/Documents/GitHub/redact/test/fixtures/complex.js:78:10)
-        at Module._compile (node:internal/modules/cjs/loader:1369:14)
-        at Module._compile (/Users/reggi/Documents/GitHub/redact/node_modules/source-map-support/source-map-support.js:568:25)
-        at Module.replacementCompile (/Users/reggi/Documents/GitHub/redact/node_modules/append-transform/index.js:60:13)
-        at Module._extensions..js (node:internal/modules/cjs/loader:1427:10)
-        at Object.<anonymous> (/Users/reggi/Documents/GitHub/redact/node_modules/append-transform/index.js:64:4)
-        at Module.load (node:internal/modules/cjs/loader:1206:32)
-        at Function.Module._load (node:internal/modules/cjs/loader:1022:12)
-        at Module.require (node:internal/modules/cjs/loader:1231:19)
-        at require (node:internal/modules/helpers:179:18)
+    Error with senstive url https://username:********@example.com/
+    [removing stacktrace for snapshot test]
   ),
 }
 `
 
-exports[`test/suite.js TAP server redact nonstring nonStringSensitve exampleGetter just nonStringSensitve/exampleGetter/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonStringSensitve exampleGetter just serverRedact > must match snapshot 1`] = `
 Object {
   "getter": "[REDACTED_NPM_SECRET]",
 }
 `
 
-exports[`test/suite.js TAP server redact nonstring nonStringSensitve object just nonStringSensitve/object/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonStringSensitve object just serverRedact > must match snapshot 1`] = `
 Object {
   "headers": Object {
     "Authorization": "[REDACTED_HEADER_AUTHORIZATION]",
@@ -182,7 +173,7 @@ Object {
 }
 `
 
-exports[`test/suite.js TAP server redact nonstring nonStringSensitve objectNumbers just nonStringSensitve/objectNumbers/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonStringSensitve objectNumbers just serverRedact > must match snapshot 1`] = `
 Object {
   "a": 1,
   "b": "[REDACTED_NPM_SECRET]",
@@ -190,7 +181,7 @@ Object {
 }
 `
 
-exports[`test/suite.js TAP server redact nonstring nonStringSensitve objectStrings just nonStringSensitve/objectStrings/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonStringSensitve objectStrings just serverRedact > must match snapshot 1`] = `
 Object {
   "a": "a",
   "b": "[REDACTED_NPM_SECRET]",
@@ -198,7 +189,7 @@ Object {
 }
 `
 
-exports[`test/suite.js TAP server redact nonstring nonStringSensitve privateProperty just nonStringSensitve/privateProperty/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonStringSensitve privateProperty just serverRedact > must match snapshot 1`] = `
 Object {
   "headers": Object {
     "Authorization": "[REDACTED_HEADER_AUTHORIZATION]",
@@ -222,7 +213,7 @@ Object {
 }
 `
 
-exports[`test/suite.js TAP server redact nonstring nonStringSensitve requestObject just nonStringSensitve/requestObject/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonStringSensitve requestObject just serverRedact > must match snapshot 1`] = `
 Object {
   "request": Object {
     "headers": Object {
@@ -236,7 +227,7 @@ Object {
 }
 `
 
-exports[`test/suite.js TAP server redact nonstring nonStringSensitve responseObject just nonStringSensitve/responseObject/just/serverRedact > must match snapshot 1`] = `
+exports[`test/suite.js TAP server redact nonstring nonStringSensitve responseObject just serverRedact > must match snapshot 1`] = `
 Object {
   "response": Object {
     "data": "not Found",

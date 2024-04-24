@@ -90,7 +90,7 @@ const runner = (testMatchers, testCases, testHandlers) => async (t) => {
           for (const [testCaseName, testCase] of Object.entries(testCases)) {
             t.test(testCaseName, async t => {
               for (const [handlerName, handler] of Object.entries(testHandlers)) {
-                t.test(`${matcherName}/${key}/${testCaseName}/${handlerName}`, async t => {
+                t.test(handlerName, async t => {
                   t.matchSnapshot(handler({ value: testCase(value) }))
                 })
               }

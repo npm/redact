@@ -1,5 +1,3 @@
-/* eslint-disable max-len */
-
 const { redactLog } = require('..')
 const t = require('tap')
 

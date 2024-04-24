@@ -66,6 +66,12 @@ const examplesNonString = {
   exampleGetterThrows,
 }
 
+const error = (() => {
+  const e = new Error(`Error with senstive url ${examples.HTTP_URL_CORE.https_com_6}`)
+  e.stack = `${e.message}\n[removing stacktrace for snapshot test]`
+  return e
+})()
+
 const examplesNonStringSensitive = {
   arrayNumbers: [1, examples.NPM_SECRET.npm_36, 3],
   arrayStrings: ['a', examples.NPM_SECRET.npm_36, 'c'],
@@ -75,7 +81,7 @@ const examplesNonStringSensitive = {
   circular,
   circularArray,
   exampleGetter,
-  error: new Error(`Error with senstive url ${examples.HTTP_URL_CORE.https_com_6}`),
+  error,
   privateProperty: {
     ...exampleObject,
     _private: 'shouldnotbeinsnapshot',
