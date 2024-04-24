@@ -9,7 +9,7 @@ const exampleObject = {
     },
     example: {
       headers: {
-        'set-cookie': 'shouldnotrender',
+        'set-cookie': 'shouldnotbeinsnapshot',
       },
     },
   },
@@ -43,6 +43,12 @@ const circular = (() => {
   return example
 })()
 
+const circularArray = (() => {
+  const example = [1, 2, 3, 4]
+  example.push(example)
+  return example
+})()
+
 const examplesNonString = {
   undefined: undefined,
   null: null,
@@ -67,7 +73,36 @@ const examplesNonStringSensitive = {
   objectStrings: { a: 'a', b: examples.NPM_SECRET.npm_36, c: 'c' },
   object: exampleObject,
   circular,
+  circularArray,
   exampleGetter,
+  error: new Error(`Error with senstive url ${examples.HTTP_URL_CORE.https_com_6}`),
+  privateProperty: {
+    ...exampleObject,
+    _private: 'shouldnotbeinsnapshot',
+  },
+  requestObject: {
+    request: {
+      extra: 'shouldnotbeinsnapshot',
+      method: 'GET',
+      url: examples.HTTP_URL_CORE.https_com_6,
+      path: '/path',
+      headers: {
+        Authorization: examples.AUTH_HEADER_CORE.bearer_auth_header_10,
+        'set-cookie': 'shouldnotbeinsnapshot',
+      },
+    },
+  },
+  responseObject: {
+    response: {
+      extra: 'shouldnotbeinsnapshot',
+      data: 'not Found',
+      status: 404,
+      headers: {
+        Authorization: examples.AUTH_HEADER_CORE.bearer_auth_header_10,
+        'set-cookie': 'shouldnotbeinsnapshot',
+      },
+    },
+  },
 }
 
 module.exports = {

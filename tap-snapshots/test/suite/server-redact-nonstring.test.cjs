@@ -126,6 +126,35 @@ Object {
 }
 `
 
+exports[`test/suite.js TAP server redact nonstring nonStringSensitve circularArray just nonStringSensitve/circularArray/just/serverRedact > must match snapshot 1`] = `
+Array [
+  1,
+  2,
+  3,
+  4,
+]
+`
+
+exports[`test/suite.js TAP server redact nonstring nonStringSensitve error just nonStringSensitve/error/just/serverRedact > must match snapshot 1`] = `
+Object {
+  "errorType": "Error",
+  "message": "Error with senstive url https://username:********@example.com/",
+  "stack": String(
+    Error: Error with senstive url https://username:********@example.com/
+        at Object.<anonymous> (/Users/reggi/Documents/GitHub/redact/test/fixtures/complex.js:78:10)
+        at Module._compile (node:internal/modules/cjs/loader:1369:14)
+        at Module._compile (/Users/reggi/Documents/GitHub/redact/node_modules/source-map-support/source-map-support.js:568:25)
+        at Module.replacementCompile (/Users/reggi/Documents/GitHub/redact/node_modules/append-transform/index.js:60:13)
+        at Module._extensions..js (node:internal/modules/cjs/loader:1427:10)
+        at Object.<anonymous> (/Users/reggi/Documents/GitHub/redact/node_modules/append-transform/index.js:64:4)
+        at Module.load (node:internal/modules/cjs/loader:1206:32)
+        at Function.Module._load (node:internal/modules/cjs/loader:1022:12)
+        at Module.require (node:internal/modules/cjs/loader:1231:19)
+        at require (node:internal/modules/helpers:179:18)
+  ),
+}
+`
+
 exports[`test/suite.js TAP server redact nonstring nonStringSensitve exampleGetter just nonStringSensitve/exampleGetter/just/serverRedact > must match snapshot 1`] = `
 Object {
   "getter": "[REDACTED_NPM_SECRET]",
@@ -166,5 +195,56 @@ Object {
   "a": "a",
   "b": "[REDACTED_NPM_SECRET]",
   "c": "c",
+}
+`
+
+exports[`test/suite.js TAP server redact nonstring nonStringSensitve privateProperty just nonStringSensitve/privateProperty/just/serverRedact > must match snapshot 1`] = `
+Object {
+  "headers": Object {
+    "Authorization": "[REDACTED_HEADER_AUTHORIZATION]",
+    "example": Object {
+      "headers": Object {
+        "set-cookie": "[REDACTED_HEADER_SET_COOKIE]",
+      },
+    },
+    "nested": Object {
+      "basic": "[REDACTED_AUTH_HEADER]",
+    },
+  },
+  "nested": Object {
+    "url": "https://username:********@example.com/",
+  },
+  "url": "https://username:********@example.com/",
+  "values": Object {
+    "jwt": "[REDACTED_JSON_WEB_TOKEN]",
+    "npm": "[REDACTED_NPM_SECRET]",
+  },
+}
+`
+
+exports[`test/suite.js TAP server redact nonstring nonStringSensitve requestObject just nonStringSensitve/requestObject/just/serverRedact > must match snapshot 1`] = `
+Object {
+  "request": Object {
+    "headers": Object {
+      "Authorization": "[REDACTED_HEADER_AUTHORIZATION]",
+      "set-cookie": "[REDACTED_HEADER_SET_COOKIE]",
+    },
+    "method": "GET",
+    "path": "/path",
+    "url": "https://username:********@example.com/",
+  },
+}
+`
+
+exports[`test/suite.js TAP server redact nonstring nonStringSensitve responseObject just nonStringSensitve/responseObject/just/serverRedact > must match snapshot 1`] = `
+Object {
+  "response": Object {
+    "data": "not Found",
+    "headers": Object {
+      "Authorization": "[REDACTED_HEADER_AUTHORIZATION]",
+      "set-cookie": "[REDACTED_HEADER_SET_COOKIE]",
+    },
+    "status": 404,
+  },
 }
 `

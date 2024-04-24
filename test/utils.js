@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 
 const t = require('tap')
-const { asterisk, redactUrlPassword } = require('../lib/utils')
+const { asterisk, redactUrlPassword, redactMatchers } = require('../lib/utils')
 const examples = require('./fixtures/examples')
 const { deepMap } = require('../lib/deep-map')
 
@@ -19,6 +19,15 @@ t.same(
   redactUrlPassword(examples.HTTP_URL_CORE.http_com_up_same_6),
   `http://${examples.test6}:${asterisk()}@example.io`
 )
+
+t.same(redactUrlPassword(1), 1)
+
+t.same(redactMatchers((v) => {
+  if (typeof v === 'string') {
+    return v
+  }
+  return v.toString()
+})(1), '1')
 
 const sample = { a: { b: { c: 1 } } }
 t.same(deepMap(sample), sample)
