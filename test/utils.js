@@ -8,6 +8,8 @@ const {
   redactUrlHostnameMatcher,
   redactUrlSearchParamsMatcher,
   redactUrlMatcher,
+  redactUrlPasswordMatcher,
+  redactUrlReplacement,
 } = require('../lib/utils')
 
 t.same(
@@ -62,4 +64,38 @@ const emptyRedactUrl = redactMatchers(
 t.same(
   emptyRedactUrl('http://example.com/?warthog=123&giraffe=456'),
   'http://example.com/?warthog=123&giraffe=456'
+)
+
+/**
+ * This test is to show that only redactMatchers with a nested redactUrlMatcher
+ * will capture multiple URLs in a string and none of the other permutations do.
+ * All other permutations break when the entered string isn't exactly a URL. The
+ * CLI support matching without urls as exact strings without using a regex
+ * first to find them within a string.
+ */
+
+const a = redactMatchers(redactUrlMatcher(redactUrlPasswordMatcher()))
+const b = redactUrlReplacement(redactUrlPasswordMatcher())
+const c = redactMatchers(redactUrlPasswordMatcher())
+const d = redactUrlPassword
+
+const arg = 'https://user:pass@example.com'
+t.same(
+  [a(arg), b(arg), c(arg), d(arg)],
+  [
+    'https://user:********@example.com',
+    'https://user:********@example.com',
+    'https://user:********@example.com',
+    'https://user:********@example.com',
+  ]
+)
+
+t.same(
+  [a(`${arg} ${arg}`), b(`${arg} ${arg}`), c(`${arg} ${arg}`), d(`${arg} ${arg}`)],
+  [
+    'https://user:********@example.com https://user:********@example.com',
+    'https://user:pass@example.com https://user:pass@example.com',
+    'https://user:pass@example.com https://user:pass@example.com',
+    'https://user:pass@example.com https://user:pass@example.com',
+  ]
 )
