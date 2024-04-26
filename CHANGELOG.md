@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.0.0](https://github.com/npm/redact/compare/v1.1.0...v2.0.0) (2024-04-26)
+
+### ⚠️ BREAKING CHANGES
+
+* This package now uses package.json exports. The only allowed entry points are `@npmcli/redact` and `@npmcli/redact/server` in addition to the package.json itself.
+
+### Features
+
+* [`a753300`](https://github.com/npm/redact/commit/a75330078fd7f90f94ddc1badd91e4f6904444f9) [#7](https://github.com/npm/redact/pull/7) adds server redact (@reggi)
+
 ## [1.1.0](https://github.com/npm/redact/compare/v1.0.0...v1.1.0) (2024-04-03)
 
 ### Features
