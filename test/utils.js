@@ -42,20 +42,31 @@ t.same(deepMap(sample, (v) => v), sample)
 t.same(deepMap(sample, (v) => v, '$'), sample)
 t.same(deepMap(sample, (v) => v, '$', new Set()), sample)
 
-const e = new Error('test')
-e.custom = 'custom'
-e.code = '1234'
-e.statusCode = 500
-t.same(deepMap(e).message, 'test')
-t.same(deepMap(e).custom, undefined)
-t.same(deepMap(e).code, '1234')
-t.same(deepMap(e).statusCode, 500)
+t.test('deepMap error', async (t) => {
+  const error = new Error('test')
+  error.custom = 'custom'
+  error.code = '1234'
+  error.statusCode = 500
+  const result = deepMap(error)
+  t.same(result.errorType, 'Error')
+  t.same(result.err.message, 'test')
+  t.same(result.err.custom, undefined)
+  t.same(result.err.code, '1234')
+  t.same(result.err.statusCode, 500)
+})
 
-const e1 = new Error('test')
-t.same(deepMap(e1).message, 'test')
-t.same(deepMap(e1).custom, undefined)
-t.same(deepMap(e1).code, undefined)
-t.same(deepMap(e1).statusCode, undefined)
+t.test('deepMap error nested', async (t) => {
+  const error = new Error('test')
+  error.custom = 'custom'
+  error.code = '1234'
+  error.statusCode = 500
+  const result = deepMap({ meow: error })
+  t.same(result.meow.errorType, 'Error')
+  t.same(result.meow.err.message, 'test')
+  t.same(result.meow.err.custom, undefined)
+  t.same(result.meow.err.code, '1234')
+  t.same(result.meow.err.statusCode, 500)
+})
 
 const redactUrl = redactMatchers(
   redactUrlMatcher(
