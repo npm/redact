@@ -42,6 +42,21 @@ t.same(deepMap(sample, (v) => v), sample)
 t.same(deepMap(sample, (v) => v, '$'), sample)
 t.same(deepMap(sample, (v) => v, '$', new Set()), sample)
 
+const e = new Error('test')
+e.custom = 'custom'
+e.code = '1234'
+e.statusCode = 500
+t.same(deepMap(e).message, 'test')
+t.same(deepMap(e).custom, undefined)
+t.same(deepMap(e).code, '1234')
+t.same(deepMap(e).statusCode, 500)
+
+const e1 = new Error('test')
+t.same(deepMap(e1).message, 'test')
+t.same(deepMap(e1).custom, undefined)
+t.same(deepMap(e1).code, undefined)
+t.same(deepMap(e1).statusCode, undefined)
+
 const redactUrl = redactMatchers(
   redactUrlMatcher(
     redactUrlHostnameMatcher({ hostname: 'example.com', replacement: 'example.net' }),
