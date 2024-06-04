@@ -113,7 +113,7 @@ t.test('error with buffer', async () => {
   error.buffer = buffer
   const result = deepMap(error)
   t.same(result.err.errorType, 'Error')
-  t.same(result.err.message, 'test')
+  t.same(result.err.message, 'meow')
   t.same(result.err.buffer, undefined)
 })
 
