@@ -105,6 +105,20 @@ t.test('deepMap error collision', async (t) => {
   t.same(result.err.custom, undefined)
 })
 
+t.same(deepMap(Buffer.from('hello')), '[unable to log instanceof buffer]')
+
+t.test('error with buffer', async () => {
+  const buffer = Buffer.from('hello')
+  const error = new Error('meow')
+  error.buffer = buffer
+  const result = deepMap(error)
+  t.same(result.err.errorType, 'Error')
+  t.same(result.err.message, 'test')
+  t.same(result.err.buffer, undefined)
+})
+
+t.same(deepMap(new TextEncoder().encode('hello')), '[unable to log instanceof Uint8Array]')
+
 const redactUrl = redactMatchers(
   redactUrlMatcher(
     redactUrlHostnameMatcher({ hostname: 'example.com', replacement: 'example.net' }),
