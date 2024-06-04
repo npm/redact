@@ -41,6 +41,17 @@ t.same(deepMap(sample), sample)
 t.same(deepMap(sample, (v) => v), sample)
 t.same(deepMap(sample, (v) => v, '$'), sample)
 t.same(deepMap(sample, (v) => v, '$', new Set()), sample)
+t.same(deepMap(Buffer.from('hello')), '[unable to log instanceof buffer]')
+const buffer = Buffer.from('hello')
+const error = new Error('meow')
+error.buffer = buffer
+const { stack, ...rest } = deepMap(error)
+t.same(rest, {
+  errorType: 'Error',
+  message: 'meow',
+  buffer: '[unable to log instanceof buffer]',
+})
+t.same(deepMap(new TextEncoder().encode('hello')), '[unable to log instanceof Uint8Array]')
 
 const redactUrl = redactMatchers(
   redactUrlMatcher(
