@@ -105,6 +105,40 @@ t.test('deepMap error collision', async (t) => {
   t.same(result.err.custom, undefined)
 })
 
+t.test('deepMap error array', async (t) => {
+  const result = deepMap([new Error('test'), new Error('test 2')])
+  t.same(result[0].err.errorType, 'Error')
+  t.same(result[0].err.message, 'test')
+  t.same(result[0].err.custom, undefined)
+
+  t.same(result[1].err.errorType, 'Error')
+  t.same(result[1].err.message, 'test 2')
+  t.same(result[1].err.custom, undefined)
+})
+
+t.test('deepMap error nested array', async (t) => {
+  const result = deepMap([new Error('test'), [new Error('test 2')]])
+  t.same(result[0].err.errorType, 'Error')
+  t.same(result[0].err.message, 'test')
+  t.same(result[0].err.custom, undefined)
+
+  t.same(result[1][0].err.errorType, 'Error')
+  t.same(result[1][0].err.message, 'test 2')
+  t.same(result[1][0].err.custom, undefined)
+})
+
+t.test('deepMap numb keyed obj', async (t) => {
+  const result = deepMap({ 2: new Error('test') })
+  t.same(result['2'].errorType, 'Error')
+  t.same(result['2'].message, 'test')
+})
+
+t.test('deepMap obj array ', async (t) => {
+  const result = deepMap({ error: [new Error('test')] })
+  t.same(result.error[0].err.errorType, 'Error')
+  t.same(result.error[0].err.message, 'test')
+})
+
 t.same(deepMap(Buffer.from('hello')), '[unable to log instanceof buffer]')
 
 t.test('error with buffer', async () => {
