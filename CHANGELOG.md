@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/npm/redact/compare/v2.0.0...v2.0.1) (2024-06-05)
+
+### Bug Fixes
+
+* [`670847f`](https://github.com/npm/redact/commit/670847f25fbbd6780f42d09d36ecc9c6bb68ec9f) [#15](https://github.com/npm/redact/pull/15) filter properties of error (#15) (@reggi)
+* [`826b60d`](https://github.com/npm/redact/commit/826b60d6fc76ff4bdbb80dcaf203c8824574b340) [#14](https://github.com/npm/redact/pull/14) prevent redact for buffers (#14) (@reggi)
+
 ## [2.0.0](https://github.com/npm/redact/compare/v1.1.0...v2.0.0) (2024-04-26)
 
 ### ⚠️ BREAKING CHANGES
