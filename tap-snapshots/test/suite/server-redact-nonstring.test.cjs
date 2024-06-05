@@ -137,12 +137,14 @@ Array [
 
 exports[`test/suite.js TAP server redact nonstring nonStringSensitve error just serverRedact > must match snapshot 1`] = `
 Object {
-  "errorType": "Error",
-  "message": "Error with senstive url https://username:********@example.com/",
-  "stack": String(
-    Error with senstive url https://username:********@example.com/
-    [removing stacktrace for snapshot test]
-  ),
+  "err": Object {
+    "errorType": "Error",
+    "message": "Error with senstive url https://username:********@example.com/",
+    "stack": String(
+      Error with senstive url https://username:********@example.com/
+      [removing stacktrace for snapshot test]
+    ),
+  },
 }
 `
 

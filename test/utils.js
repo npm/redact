@@ -39,18 +39,84 @@ t.same(redactMatchers((v) => {
 const sample = { a: { b: { c: 1 } } }
 t.same(deepMap(sample), sample)
 t.same(deepMap(sample, (v) => v), sample)
-t.same(deepMap(sample, (v) => v, '$'), sample)
-t.same(deepMap(sample, (v) => v, '$', new Set()), sample)
-t.same(deepMap(Buffer.from('hello')), '[unable to log instanceof buffer]')
-const buffer = Buffer.from('hello')
-const error = new Error('meow')
-error.buffer = buffer
-const { stack, ...rest } = deepMap(error)
-t.same(rest, {
-  errorType: 'Error',
-  message: 'meow',
-  buffer: '[unable to log instanceof buffer]',
+t.same(deepMap(sample, (v) => v, ['$']), sample)
+t.same(deepMap(sample, (v) => v, ['$'], new Set()), sample)
+
+t.test('deepMap error', async (t) => {
+  const error = new Error('test')
+  error.custom = 'custom'
+  error.code = '1234'
+  error.statusCode = 500
+  const result = deepMap(error)
+  t.same(result.err.errorType, 'Error')
+  t.same(result.err.message, 'test')
+  t.same(result.err.custom, undefined)
+  t.same(result.err.code, '1234')
+  t.same(result.err.statusCode, 500)
 })
+
+t.test('deepMap error nested', async (t) => {
+  const error = new Error('test')
+  error.custom = 'custom'
+  error.code = '1234'
+  error.statusCode = 500
+  const result = deepMap({ meow: error })
+  t.same(result.meow.errorType, 'Error')
+  t.same(result.meow.message, 'test')
+  t.same(result.meow.custom, undefined)
+  t.same(result.meow.code, '1234')
+  t.same(result.meow.statusCode, 500)
+})
+
+t.test('deepMap error nested rm key err', async (t) => {
+  const error = new Error('test')
+  error.custom = 'custom'
+  error.code = '1234'
+  error.statusCode = 500
+  const result = deepMap({ err: error })
+  t.same(result.err.errorType, 'Error')
+  t.same(result.err.message, 'test')
+  t.same(result.err.custom, undefined)
+  t.same(result.err.code, '1234')
+  t.same(result.err.statusCode, 500)
+})
+
+t.test('deepMap error nested rm key error', async (t) => {
+  const error = new Error('test')
+  error.custom = 'custom'
+  error.code = '1234'
+  error.statusCode = 500
+  const result = deepMap({ error })
+  t.same(result.error.errorType, 'Error')
+  t.same(result.error.message, 'test')
+  t.same(result.error.custom, undefined)
+  t.same(result.error.code, '1234')
+  t.same(result.error.statusCode, 500)
+})
+
+t.test('deepMap error collision', async (t) => {
+  const result = deepMap({ error: new Error('test'), err: new Error('test 2') })
+  t.same(result.error.errorType, 'Error')
+  t.same(result.error.message, 'test')
+  t.same(result.error.custom, undefined)
+
+  t.same(result.err.errorType, 'Error')
+  t.same(result.err.message, 'test 2')
+  t.same(result.err.custom, undefined)
+})
+
+t.same(deepMap(Buffer.from('hello')), '[unable to log instanceof buffer]')
+
+t.test('error with buffer', async () => {
+  const buffer = Buffer.from('hello')
+  const error = new Error('meow')
+  error.buffer = buffer
+  const result = deepMap(error)
+  t.same(result.err.errorType, 'Error')
+  t.same(result.err.message, 'meow')
+  t.same(result.err.buffer, undefined)
+})
+
 t.same(deepMap(new TextEncoder().encode('hello')), '[unable to log instanceof Uint8Array]')
 
 const redactUrl = redactMatchers(
