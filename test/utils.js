@@ -139,6 +139,12 @@ t.test('deepMap obj array ', async (t) => {
   t.same(result.error[0].err.message, 'test')
 })
 
+t.test('deepMap obj array ', async (t) => {
+  const result = deepMap([{ meow: new Error('test') }])
+  t.same(result[0].meow.errorType, 'Error')
+  t.same(result[0].meow.message, 'test')
+})
+
 t.same(deepMap(Buffer.from('hello')), '[unable to log instanceof buffer]')
 
 t.test('error with buffer', async () => {
