@@ -159,6 +159,12 @@ t.test('error with buffer', async () => {
 
 t.same(deepMap(new TextEncoder().encode('hello')), '[unable to log instanceof Uint8Array]')
 
+t.test('log with function', async () => {
+  const x = () => {}
+  const result = deepMap({ x })
+  t.same(result.x, '[unable to log function]')
+})
+
 const redactUrl = redactMatchers(
   redactUrlMatcher(
     redactUrlHostnameMatcher({ hostname: 'example.com', replacement: 'example.net' }),
