@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/npm/redact/compare/v2.0.1...v3.0.0) (2024-09-24)
+### ⚠️ BREAKING CHANGES
+* `@npmcli/redact` now supports node `^18.17.0 || >=20.5.0`
+### Bug Fixes
+* [`2ffd026`](https://github.com/npm/redact/commit/2ffd0267784c28cfa3564ea9ab1667b88b3fe843) [#28](https://github.com/npm/redact/pull/28) align to npm 10 node engine range (@hashtagchris)
+### Chores
+* [`864a01a`](https://github.com/npm/redact/commit/864a01a470ceed8f9ea6e19ab8c387fba9442dd2) [#28](https://github.com/npm/redact/pull/28) run template-oss-apply (@hashtagchris)
+* [`1d90363`](https://github.com/npm/redact/commit/1d903634b257fc73e8703d6dd8d668e7ff3e7d3e) [#26](https://github.com/npm/redact/pull/26) bump @npmcli/eslint-config from 4.0.5 to 5.0.0 (@dependabot[bot])
+* [`96c5285`](https://github.com/npm/redact/commit/96c5285bd08c2228922b712ab1a5d57c38fcf22e) [#27](https://github.com/npm/redact/pull/27) postinstall for dependabot template-oss PR (@hashtagchris)
+* [`01daecd`](https://github.com/npm/redact/commit/01daecd5e14650831416ea342b8e3094efb03f8f) [#27](https://github.com/npm/redact/pull/27) bump @npmcli/template-oss from 4.23.1 to 4.23.3 (@dependabot[bot])
+
 ## [2.0.1](https://github.com/npm/redact/compare/v2.0.0...v2.0.1) (2024-06-05)
 
 ### Bug Fixes
