@@ -86,7 +86,7 @@ t.test('serializedError', async t => {
     const exampleError = 'hello world'
     const result = serializedError(exampleError)
     t.same(result.errorType, 'Error', 'should serialize error')
-    t.same(result.message, 'attempted to serialize a non-error object', 'should serialize message')
+    t.same(result.message, 'attempted to serialize a non-error, string String', 'should serialize message')
   })
 
   await t.test('no-message no-stack', async t => {
@@ -98,6 +98,18 @@ t.test('serializedError', async t => {
       },
       'should serialize error'
     )
+  })
+
+  await t.test('undefined', async t => {
+    const results = serializedError(undefined)
+    t.same(results.errorType, 'Error', 'should serialize error')
+    t.same(results.message, 'attempted to serialize a non-error, undefined undefined', 'should serialize message')
+  })
+
+  await t.test('date', async t => {
+    const results = serializedError(new Date())
+    t.same(results.errorType, 'Error', 'should serialize error')
+    t.same(results.message, 'attempted to serialize a non-error, object Date', 'should serialize message')
   })
 })
 
@@ -132,4 +144,14 @@ t.test('safeThrow', async t => {
   } catch (goodError) {
     t.same(goodError.sensitive, undefined, 'should not have sensitive field')
   }
+})
+
+t.test('serialize a safeError', async t => {
+  const badError = new CustomError('hello world', 'sensitive data')
+  const goodError = safeError(badError)
+  const serialized = serializedError(goodError)
+  t.same(serialized.errorType, 'CustomError', 'should serialize error')
+  t.same(serialized.message, 'hello world', 'should serialize message')
+  t.same(serialized.stack, goodError.stack, 'should serialize stack')
+  t.same(serialized.sensitive, undefined, 'should not serialize sensitive data')
 })
