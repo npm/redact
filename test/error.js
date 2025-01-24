@@ -31,6 +31,24 @@ t.test('serializedError', async t => {
     )
   })
 
+  await t.test('attached error (status not statusCode)', async t => {
+    const exampleError = new Error('hello world')
+    exampleError.code = 'E12345'
+    exampleError.status = 404
+
+    t.same(
+      serializedError(exampleError),
+      {
+        errorType: 'Error',
+        message: 'hello world',
+        stack: exampleError.stack,
+        code: 'E12345',
+        statusCode: 404,
+      },
+      'should serialize error with code / statusCode'
+    )
+  })
+
   await t.test('attached error', async t => {
     const exampleError = new Error('hello world')
     exampleError.code = 'E12345'
