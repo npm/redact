@@ -82,13 +82,6 @@ t.test('serializedError', async t => {
     )
   })
 
-  await t.test('non-error', async t => {
-    const exampleError = 'hello world'
-    const result = serializedError(exampleError)
-    t.same(result.errorType, 'Error', 'should serialize error')
-    t.same(result.message, 'attempted to serialize a non-error, string String', 'should serialize message')
-  })
-
   await t.test('no-message no-stack', async t => {
     const exampleError = new NoMessageNoStackError('hello world')
     t.same(
@@ -110,6 +103,12 @@ t.test('serializedError', async t => {
     const results = serializedError(new Date())
     t.same(results.errorType, 'Error', 'should serialize error')
     t.same(results.message, 'attempted to serialize a non-error, object Date', 'should serialize message')
+  })
+
+  await t.test('string', async t => {
+    const results = serializedError('hello world')
+    t.same(results.errorType, 'Error', 'should serialize error')
+    t.same(results.message, 'attempted to serialize a non-error, string String, "hello world"', 'should serialize message')
   })
 })
 
@@ -134,16 +133,26 @@ t.test('safeError', async t => {
 })
 
 t.test('safeThrow', async t => {
-  const badError = new CustomError('hello world', 'sensitive data')
-  t.same(badError.sensitive, 'sensitive data', 'should have sensitive field')
-  try {
-    await safeThrow(async () => {
-      throw badError
-    })
-    t.fail('should throw')
-  } catch (goodError) {
-    t.same(goodError.sensitive, undefined, 'should not have sensitive field')
-  }
+  await t.test('successfully throws error', async t => {
+    const badError = new CustomError('hello world', 'sensitive data')
+    t.same(badError.sensitive, 'sensitive data', 'should have sensitive field')
+    try {
+      await safeThrow(async () => {
+        throw badError
+      })
+      t.fail('should throw')
+    } catch (goodError) {
+      t.same(goodError.sensitive, undefined, 'should not have sensitive field')
+    }
+  })
+  t.test('invalid argument not function', async t => {
+    try {
+      await safeThrow('hello world')
+      t.fail('should throw')
+    } catch (error) {
+      t.same(error.message, 'safeThrow expects a function', 'should throw with correct message')
+    }
+  })
 })
 
 t.test('serialize a safeError', async t => {
