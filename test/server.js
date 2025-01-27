@@ -1,5 +1,6 @@
 const t = require('tap')
-const { redact } = require('../lib/server')
+const { serializeError } = require('../lib/error')
+const { redact, redactError, redactThrow } = require('../lib/server')
 const matchers = require('../lib/matchers')
 const examples = require('./fixtures/examples')
 
@@ -29,4 +30,71 @@ t.test('redact', async t => {
       },
     })
   })
+})
+
+class CustomError extends Error {
+  constructor (message, data) {
+    super(message)
+    this.sensitive = data
+  }
+}
+
+t.test('redactError', async t => {
+  await t.test('native error', async t => {
+    const badError = new Error('hello world')
+    Object.assign(badError, {
+      sensitive: 'sensitive data',
+    })
+    const goodError = redactError(badError)
+
+    t.same(badError.sensitive, 'sensitive data', 'should have sensitive field')
+    t.same(goodError.sensitive, undefined, 'should not have sensitive field')
+  })
+  await t.test('custom error', async t => {
+    const badError = new CustomError('hello world', 'sensitive data')
+    const goodError = redactError(badError)
+
+    t.same(badError.sensitive, 'sensitive data', 'should have sensitive field')
+    t.same(goodError.sensitive, undefined, 'should not have sensitive field')
+  })
+  await t.test('redacts sensitive error.message', async t => {
+    const badError = new Error(`npm token: ${examples.NPM_SECRET.npm_36}`)
+    const goodError = redactError(badError)
+
+    t.same(badError.message, `npm token: ${examples.NPM_SECRET.npm_36}`, 'should have message')
+    t.same(goodError.message, `npm token: ${matchers.NPM_SECRET.replacement}`, 'should have message')
+  })
+})
+
+t.test('redactThrow', async t => {
+  await t.test('successfully throws error', async t => {
+    const badError = new CustomError('hello world', 'sensitive data')
+    t.same(badError.sensitive, 'sensitive data', 'should have sensitive field')
+    try {
+      await redactThrow(async () => {
+        throw badError
+      })
+      t.fail('should throw')
+    } catch (goodError) {
+      t.same(goodError.sensitive, undefined, 'should not have sensitive field')
+    }
+  })
+  t.test('invalid argument not function', async t => {
+    try {
+      await redactThrow('hello world')
+      t.fail('should throw')
+    } catch (error) {
+      t.same(error.message, 'redactThrow expects a function', 'should throw with correct message')
+    }
+  })
+})
+
+t.test('serialize a redactError', async t => {
+  const badError = new CustomError('hello world', 'sensitive data')
+  const goodError = redactError(badError)
+  const serialized = serializeError(goodError)
+  t.same(serialized.errorType, 'CustomError', 'should serialize error')
+  t.same(serialized.message, 'hello world', 'should serialize message')
+  t.same(serialized.stack, goodError.stack, 'should serialize stack')
+  t.same(serialized.sensitive, undefined, 'should not serialize sensitive data')
 })

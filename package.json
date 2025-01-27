@@ -6,7 +6,6 @@
   "exports": {
     ".": "./lib/index.js",
     "./server": "./lib/server.js",
-    "./error": "./lib/error.js",
     "./package.json": "./package.json"
   },
   "scripts": {
