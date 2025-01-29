@@ -57,6 +57,15 @@ t.test('redactError', async t => {
     t.same(badError.sensitive, 'sensitive data', 'should have sensitive field')
     t.same(goodError.sensitive, undefined, 'should not have sensitive field')
   })
+
+  await t.test('error w/ sensitive status', async t => {
+    const badError = new Error('hello world')
+    badError.status = examples.NPM_SECRET.npm_36
+    const goodError = redactError(badError)
+    t.same(badError.status, examples.NPM_SECRET.npm_36, 'should not have sensitive field')
+    t.same(goodError.statusCode, matchers.NPM_SECRET.replacement, 'should not have sensitive field')
+  })
+
   await t.test('redacts sensitive error.message', async t => {
     const badError = new Error(`npm token: ${examples.NPM_SECRET.npm_36}`)
     const goodError = redactError(badError)
@@ -95,6 +104,7 @@ t.test('serialize a redactError', async t => {
   const serialized = serializeError(goodError)
   t.same(serialized.errorType, 'CustomError', 'should serialize error')
   t.same(serialized.message, 'hello world', 'should serialize message')
-  t.same(serialized.stack, goodError.stack, 'should serialize stack')
+  t.same(serialized.stack, badError.stack, 'should serialize stack')
+  t.same(goodError.stack, badError.stack, 'should serialize stack')
   t.same(serialized.sensitive, undefined, 'should not serialize sensitive data')
 })
