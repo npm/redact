@@ -79,10 +79,13 @@ t.test('redactThrow', async t => {
   await t.test('successfully throws error', async t => {
     const badError = new CustomError('hello world', 'sensitive data')
     t.same(badError.sensitive, 'sensitive data', 'should have sensitive field')
+
+    const handler = async () => {
+      throw badError
+    }
+    const safeHandler = redactThrow(handler)
     try {
-      await redactThrow(async () => {
-        throw badError
-      })
+      await safeHandler()
       t.fail('should throw')
     } catch (goodError) {
       t.same(goodError.sensitive, undefined, 'should not have sensitive field')
@@ -90,11 +93,29 @@ t.test('redactThrow', async t => {
   })
   t.test('invalid argument not function', async t => {
     try {
-      await redactThrow('hello world')
+      redactThrow('hello world')
       t.fail('should throw')
     } catch (error) {
       t.same(error.message, 'redactThrow expects a function', 'should throw with correct message')
     }
+  })
+
+  t.test('ensures args are passed down', async t => {
+    const handler = async (a, b, c) => {
+      if (a !== 1) {
+        throw new Error('a is not 1')
+      }
+      if (b !== 2) {
+        throw new Error('b is not 2')
+      }
+      if (c !== 3) {
+        throw new Error('c is not 3')
+      }
+      return a + b + c
+    }
+    const safeHandler = redactThrow(handler)
+    const result = await safeHandler(1, 2, 3)
+    t.same(result, 6, 'should return correct')
   })
 })
 
