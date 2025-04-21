@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.2.0](https://github.com/npm/redact/compare/v3.1.1...v3.2.0) (2025-04-21)
+### Features
+* [`e30b453`](https://github.com/npm/redact/commit/e30b453db65dcf450242b5a187a9d78f2bc049fa) [#39](https://github.com/npm/redact/pull/39) adds cookie to redaction list (#39) (@reggi)
+### Chores
+* [`9868381`](https://github.com/npm/redact/commit/98683815f691bf135cf2da78ce51a88b1926559b) [#36](https://github.com/npm/redact/pull/36) use `throws` and `rejects` assertions (#36) (@hashtagchris)
+
 ## [3.1.1](https://github.com/npm/redact/compare/v3.1.0...v3.1.1) (2025-01-29)
 ### Bug Fixes
 * [`f509ae4`](https://github.com/npm/redact/commit/f509ae42be6479339335b4dfcd1c62ea11c92b3c) [#34](https://github.com/npm/redact/pull/34) server: redactThrow should return function (#34) (@reggi)
