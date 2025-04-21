@@ -123,3 +123,17 @@ t.test('serialize a redactError', async t => {
   t.same(goodError.stack, badError.stack, 'should serialize stack')
   t.same(serialized.sensitive, undefined, 'should not serialize sensitive data')
 })
+
+t.test('readcts header.cookie', async t => {
+  const input = {
+    headers: {
+      cookie: examples.COOKIE,
+    },
+  }
+  const output = redact(input)
+  t.same(output, {
+    headers: {
+      cookie: matchers.DEEP_HEADER_COOKIE.replacement,
+    },
+  })
+})
