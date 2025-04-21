@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.1.1](https://github.com/npm/redact/compare/v3.1.0...v3.1.1) (2025-01-29)
+### Bug Fixes
+* [`f509ae4`](https://github.com/npm/redact/commit/f509ae42be6479339335b4dfcd1c62ea11c92b3c) [#34](https://github.com/npm/redact/pull/34) server: redactThrow should return function (#34) (@reggi)
+
+## [3.1.0](https://github.com/npm/redact/compare/v3.0.0...v3.1.0) (2025-01-29)
+### Features
+* [`d1837d1`](https://github.com/npm/redact/commit/d1837d1679fcf6634b087ffeed339c2efb858604) [#32](https://github.com/npm/redact/pull/32) server: introduces serializeError and redactError (#32) (@reggi)
+
 ## [3.0.0](https://github.com/npm/redact/compare/v2.0.1...v3.0.0) (2024-09-24)
 ### ⚠️ BREAKING CHANGES
 * `@npmcli/redact` now supports node `^18.17.0 || >=20.5.0`
