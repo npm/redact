@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 
 const t = require('tap')
-const { resolve } = require('path')
+const { resolve } = require('node:path')
 const examples = require('./fixtures/examples')
 const matchers = require('../lib/matchers')
 const cli = require('..')
