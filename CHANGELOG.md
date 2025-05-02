@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.1](https://github.com/npm/redact/compare/v3.2.0...v3.2.1) (2025-05-02)
+### Bug Fixes
+* [`2aca0ac`](https://github.com/npm/redact/commit/2aca0ac6ed9f4ce2090b3780ceba2786d1d920df) [#42](https://github.com/npm/redact/pull/42) check if Buffer is available (#42) (@reggi)
+### Chores
+* [`40f41d9`](https://github.com/npm/redact/commit/40f41d969a50bb2918aeb149cea74c69c3c68111) [#43](https://github.com/npm/redact/pull/43) adds codeql workflow (#43) (@reggi)
+* [`ce4294a`](https://github.com/npm/redact/commit/ce4294a8b971930fe69bb313f22d47523c9090a4) [#41](https://github.com/npm/redact/pull/41) bumping @npmcli/template-oss from 4.23.3 to 4.24.3 (#41) (@owlstronaut)
+
 ## [3.2.0](https://github.com/npm/redact/compare/v3.1.1...v3.2.0) (2025-04-21)
 ### Features
 * [`e30b453`](https://github.com/npm/redact/commit/e30b453db65dcf450242b5a187a9d78f2bc049fa) [#39](https://github.com/npm/redact/pull/39) adds cookie to redaction list (#39) (@reggi)
