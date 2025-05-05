@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.2.2](https://github.com/npm/redact/compare/v3.2.1...v3.2.2) (2025-05-05)
+### Bug Fixes
+* [`254415e`](https://github.com/npm/redact/commit/254415e161a42d8d7691cd0abbf8069b7da2ca73) [#45](https://github.com/npm/redact/pull/45) check if buffer is available instead of using Buffer module (#45) (@reggi)
+
 ## [3.2.1](https://github.com/npm/redact/compare/v3.2.0...v3.2.1) (2025-05-02)
 ### Bug Fixes
 * [`2aca0ac`](https://github.com/npm/redact/commit/2aca0ac6ed9f4ce2090b3780ceba2786d1d920df) [#42](https://github.com/npm/redact/pull/42) check if Buffer is available (#42) (@reggi)
