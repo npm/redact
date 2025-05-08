@@ -27,6 +27,15 @@ const exampleGetter = (() => {
   return example
 })()
 
+const exampleCustomSerializer = (() => {
+  class ExampleClass {
+    toJSON () {
+      return `latitude: 37.7822689; longitude: -122.3937449; secret: ${examples.NPM_SECRET.npm_36}`
+    }
+  }
+  return new ExampleClass()
+})()
+
 const exampleGetterThrows = (() => {
   const example = {}
   Object.defineProperty(example, 'getter', {
@@ -35,6 +44,15 @@ const exampleGetterThrows = (() => {
     },
   })
   return example
+})()
+
+const exampleCustomSerializerThrows = (() => {
+  class ExampleClass {
+    toJSON () {
+      throw new Error('Error in toJSON')
+    }
+  }
+  return new ExampleClass()
 })()
 
 const circular = (() => {
@@ -64,6 +82,7 @@ const examplesNonString = {
   objectNumbers: { a: 1, b: 2, c: 3 },
   objectStrings: { a: 'a', b: 'b', c: 'c' },
   exampleGetterThrows,
+  exampleCustomSerializerThrows,
 }
 
 const error = (() => {
@@ -81,6 +100,7 @@ const examplesNonStringSensitive = {
   circular,
   circularArray,
   exampleGetter,
+  exampleCustomSerializer,
   error,
   privateProperty: {
     ...exampleObject,

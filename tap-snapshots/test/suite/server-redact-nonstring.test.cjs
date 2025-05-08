@@ -29,6 +29,10 @@ exports[`test/suite.js TAP server redact nonstring nonString emptyObject just se
 Object {}
 `
 
+exports[`test/suite.js TAP server redact nonstring nonString exampleCustomSerializerThrows just serverRedact > must match snapshot 1`] = `
+[error getting JSON value: Error in toJSON]
+`
+
 exports[`test/suite.js TAP server redact nonstring nonString exampleGetterThrows just serverRedact > must match snapshot 1`] = `
 Object {
   "getter": "[error getting value: Error in getter]",
@@ -146,6 +150,10 @@ Object {
     ),
   },
 }
+`
+
+exports[`test/suite.js TAP server redact nonstring nonStringSensitve exampleCustomSerializer just serverRedact > must match snapshot 1`] = `
+latitude: 37.7822689; longitude: -122.3937449; secret: [REDACTED_NPM_SECRET]
 `
 
 exports[`test/suite.js TAP server redact nonstring nonStringSensitve exampleGetter just serverRedact > must match snapshot 1`] = `
