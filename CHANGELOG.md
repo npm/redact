@@ -1,5 +1,11 @@
 # Changelog
 
+## [4.0.0](https://github.com/npm/redact/compare/v3.2.2...v4.0.0) (2025-10-22)
+### ⚠️ BREAKING CHANGES
+* `@npmcli/redact` now supports node `^20.17.0 || >=22.9.0`
+### Bug Fixes
+* [`ff3fc01`](https://github.com/npm/redact/commit/ff3fc012bfa3f48fa7753ffb9d866f953ef5647a) [#48](https://github.com/npm/redact/pull/48) align to npm 11 node engine range (#48) (@owlstronaut)
+
 ## [3.2.2](https://github.com/npm/redact/compare/v3.2.1...v3.2.2) (2025-05-05)
 ### Bug Fixes
 * [`254415e`](https://github.com/npm/redact/commit/254415e161a42d8d7691cd0abbf8069b7da2ca73) [#45](https://github.com/npm/redact/pull/45) check if buffer is available instead of using Buffer module (#45) (@reggi)
