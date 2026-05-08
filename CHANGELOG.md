@@ -1,5 +1,15 @@
 # Changelog
 
+## [5.0.0](https://github.com/npm/redact/compare/v4.0.0...v5.0.0) (2026-05-08)
+### ⚠️ BREAKING CHANGES
+* `@npmcli/redact` now supports node `^22.22.2 || ^24.15.0 || >=26.0.0`
+* template-oss-apply
+### Features
+* [`4eca344`](https://github.com/npm/redact/commit/4eca344227b3e73395f063df8bd0c811faaf6fab) [#51](https://github.com/npm/redact/pull/51) bump to new node engine range (@owlstronaut)
+* [`26a18b4`](https://github.com/npm/redact/commit/26a18b4f371a731e8cac4efdebea5734f6e90e57) [#51](https://github.com/npm/redact/pull/51) template-oss-apply (@owlstronaut)
+### Chores
+* [`af8414b`](https://github.com/npm/redact/commit/af8414bf6115f765d4350b56f17699bd792dffc8) [#51](https://github.com/npm/redact/pull/51) template-oss-apply (@owlstronaut)
+
 ## [4.0.0](https://github.com/npm/redact/compare/v3.2.2...v4.0.0) (2025-10-22)
 ### ⚠️ BREAKING CHANGES
 * `@npmcli/redact` now supports node `^20.17.0 || >=22.9.0`
