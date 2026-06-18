@@ -119,6 +119,30 @@ t.test('error with buffer', async () => {
 
 t.same(deepMap(new TextEncoder().encode('hello')), '[unable to log instanceof Uint8Array]')
 
+t.test('deepMap date', async (t) => {
+  const date = new Date('2010-01-12T00:00:00.000Z')
+  const result = deepMap(date)
+  t.same(result, '2010-01-12T00:00:00.000Z')
+})
+
+t.test('deepMap nested date', async (t) => {
+  const date = new Date('2010-01-12T00:00:00.000Z')
+  const result = deepMap({ message: 'npm version 0.0.1 published', date })
+  t.same(result, ({ message: 'npm version 0.0.1 published', date: '2010-01-12T00:00:00.000Z' }))
+})
+
+t.test('deepMap URL', async (t) => {
+  const url = new URL('https://www.npmjs.com/package/@npmcli/redact?activeTab=versions')
+  const result = deepMap(url)
+  t.same(result, 'https://www.npmjs.com/package/@npmcli/redact?activeTab=versions')
+})
+
+t.test('deepMap nested URL', async (t) => {
+  const url = new URL('https://www.npmjs.com/package/@npmcli/redact?activeTab=versions')
+  const result = deepMap({ message: 'request start', url })
+  t.same(result, ({ message: 'request start', url: 'https://www.npmjs.com/package/@npmcli/redact?activeTab=versions' }))
+})
+
 const redactUrl = redactMatchers(
   redactUrlMatcher(
     redactUrlHostnameMatcher({ hostname: 'example.com', replacement: 'example.net' }),
